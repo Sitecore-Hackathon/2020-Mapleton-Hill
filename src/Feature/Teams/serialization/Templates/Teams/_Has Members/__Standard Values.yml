@@ -1,0 +1,18 @@
+﻿---
+ID: "a9b6d8c1-5968-485d-8ff0-aca8ac7c1277"
+Parent: "1b7e5c2f-5240-4ac4-aaff-c6ef5d29623f"
+Template: "1b7e5c2f-5240-4ac4-aaff-c6ef5d29623f"
+Path: /sitecore/templates/Feature/Teams/_Has Members/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T162337Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
