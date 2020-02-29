@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Hackathon.Feature.FormExtensions.Models;
-using Sitecore.Analytics;
 using Sitecore.Diagnostics;
 using Sitecore.ExperienceForms.Models;
 using Sitecore.ExperienceForms.Processing;
@@ -18,7 +17,7 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
     /// Submit action for updating <see cref="PersonalInformation"/> and <see cref="EmailAddressList"/> facets of a <see cref="XConnect.Contact"/>.
     /// </summary>
     /// <seealso cref="Sitecore.ExperienceForms.Processing.Actions.SubmitActionBase{TeamFormData}" />
-    public class AddTeamContacts : SubmitActionBase<TeamFormData>
+    public class AddTeamContacts : SubmitActionBase<string>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateContact"/> class.
@@ -29,80 +28,39 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
         }
 
         /// <summary>
-        /// Gets the current tracker.
-        /// </summary>
-        protected virtual ITracker CurrentTracker => Tracker.Current;
-
-        /// <summary>
         /// Executes the action with the specified <paramref name="data" />.
         /// </summary>
         /// <param name="data">The data.</param>
         /// <param name="formSubmitContext">The form submit context.</param>
         /// <returns><c>true</c> if the action is executed correctly; otherwise <c>false</c></returns>
-        protected override bool Execute(TeamFormData data, FormSubmitContext formSubmitContext)
+        protected override bool Execute(string data, FormSubmitContext formSubmitContext)
         {
             Assert.ArgumentNotNull(data, nameof(data));
             Assert.ArgumentNotNull(formSubmitContext, nameof(formSubmitContext));
 
-            string teamName = GetFieldValueById(data.TeamNameFieldId, formSubmitContext.Fields);
-            string teamMemberOneEmail = GetFieldValueById(data.TeamMemberOneEmailFieldId, formSubmitContext.Fields);
-            string teamMemberTwoEmail = GetFieldValueById(data.TeamMemberTwoEmailFieldId, formSubmitContext.Fields);
-            string teamMemberThreeEmail = GetFieldValueById(data.TeamMemberThreeEmailFieldId, formSubmitContext.Fields);
+            string teamName = GetFieldValueByName("TeamName", formSubmitContext.Fields);
 
-            if (string.IsNullOrEmpty(teamMemberOneEmail) 
-                && string.IsNullOrEmpty(teamMemberTwoEmail) 
-                && string.IsNullOrEmpty(teamMemberThreeEmail))
-            {
-                return false;
-            }
-
-            var teamMembers = new List<TeamMember> {
-                new TeamMember {
-                    TeamName = teamName,
-                    Email = teamMemberOneEmail,
-                    Twitter = GetFieldValueById(data.TeamMemberOneTwitterFieldId, formSubmitContext.Fields),
-                    LinkedIn = GetFieldValueById(data.TeamMemberOneLinkedInFieldId, formSubmitContext.Fields),
-                    FirstName = GetFieldValueById(data.TeamMemberOneFirstNameFieldId, formSubmitContext.Fields),
-                    LastName = GetFieldValueById(data.TeamMemberOneLastNameFieldId, formSubmitContext.Fields),
-                    City = GetFieldValueById(data.TeamMemberOneCityFieldId, formSubmitContext.Fields),
-                    State = GetFieldValueById(data.TeamMemberOneStateFieldId, formSubmitContext.Fields),
-                    Country = GetFieldValueById(data.TeamMemberOneCountryFieldId, formSubmitContext.Fields)
-                } 
-            };
-
-            if (!string.IsNullOrEmpty(teamMemberTwoEmail))
+            var teamMembers = new List<TeamMember>();
+            int i = 1;
+            while (!string.IsNullOrEmpty(GetFieldValueByName($"TM{i}_Email", formSubmitContext.Fields)))
             {
                 teamMembers.Add(new TeamMember
                 {
                     TeamName = teamName,
-                    Email = teamMemberTwoEmail,
-                    Twitter = GetFieldValueById(data.TeamMemberTwoTwitterFieldId, formSubmitContext.Fields),
-                    LinkedIn = GetFieldValueById(data.TeamMemberTwoLinkedInFieldId, formSubmitContext.Fields),
-                    FirstName = GetFieldValueById(data.TeamMemberTwoFirstNameFieldId, formSubmitContext.Fields),
-                    LastName = GetFieldValueById(data.TeamMemberTwoLastNameFieldId, formSubmitContext.Fields),
-                    City = GetFieldValueById(data.TeamMemberTwoCityFieldId, formSubmitContext.Fields),
-                    State = GetFieldValueById(data.TeamMemberTwoStateFieldId, formSubmitContext.Fields),
-                    Country = GetFieldValueById(data.TeamMemberTwoCountryFieldId, formSubmitContext.Fields)
+                    Email = GetFieldValueByName($"TM{i}_Email", formSubmitContext.Fields),
+                    Twitter = GetFieldValueByName($"TM{i}_TwitterUrl", formSubmitContext.Fields),
+                    LinkedIn = GetFieldValueByName($"TM{i}_LinkedInUrl", formSubmitContext.Fields),
+                    FirstName = GetFieldValueByName($"TM{i}_FirstName", formSubmitContext.Fields),
+                    LastName = GetFieldValueByName($"TM{i}_LastName", formSubmitContext.Fields),
+                    City = GetFieldValueByName($"TM{i}_City", formSubmitContext.Fields),
+                    State = GetFieldValueByName($"TM{i}_State", formSubmitContext.Fields),
+                    Country = GetFieldValueByName($"TM{i}_Country", formSubmitContext.Fields),
                 });
+
+                i++;
             }
 
-            if (!string.IsNullOrEmpty(teamMemberThreeEmail))
-            {
-                teamMembers.Add(new TeamMember
-                {
-                    TeamName = teamName,
-                    Email = teamMemberThreeEmail,
-                    Twitter = GetFieldValueById(data.TeamMemberThreeTwitterFieldId, formSubmitContext.Fields),
-                    LinkedIn = GetFieldValueById(data.TeamMemberThreeLinkedInFieldId, formSubmitContext.Fields),
-                    FirstName = GetFieldValueById(data.TeamMemberThreeFirstNameFieldId, formSubmitContext.Fields),
-                    LastName = GetFieldValueById(data.TeamMemberThreeLastNameFieldId, formSubmitContext.Fields),
-                    City = GetFieldValueById(data.TeamMemberThreeCityFieldId, formSubmitContext.Fields),
-                    State = GetFieldValueById(data.TeamMemberThreeStateFieldId, formSubmitContext.Fields),
-                    Country = GetFieldValueById(data.TeamMemberThreeCountryFieldId, formSubmitContext.Fields)
-                });
-            }
-
-            if (teamMembers.All(tm => string.IsNullOrEmpty(tm.Email)))
+            if (!teamMembers.Any())
             {
                 return false;
             }
@@ -135,7 +93,6 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                     Logger.LogError(ex.Message, ex);
                     return false;
                 }
-
             }
 
             return true;
@@ -156,9 +113,9 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
         /// <param name="id">The identifier.</param>
         /// <param name="fields">The fields.</param>
         /// <returns>The field value with the specified <paramref name="id" />.</returns>
-        private static string GetFieldValueById(Guid id, IList<IViewModel> fields)
+        private static string GetFieldValueByName(string name, IList<IViewModel> fields)
         {
-            var field = fields.FirstOrDefault(f => Guid.Parse(f.ItemId) == id);
+            var field = fields.FirstOrDefault(f => f.Name == name);
             return field?.GetType().GetProperty("Value")?.GetValue(field, null)?.ToString() ?? string.Empty;
         }
 
@@ -202,8 +159,7 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
             {
                 return;
             }
-
-
+            
             Address address = new Address
             {
                 City = city,
@@ -213,8 +169,6 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
             AddressList addressFacet = contact.Addresses();
             if (addressFacet == null)
             {
-                
-
                 addressFacet = new AddressList(address, "Preferred");
             }
             else

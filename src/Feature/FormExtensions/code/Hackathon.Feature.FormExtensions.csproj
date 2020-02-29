@@ -453,9 +453,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
+    <Compile Include="SitecoreConstants.cs" />
     <Compile Include="Models\TeamMember.cs" />
-    <Compile Include="Models\TeamFormData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubmitActions\AddTeam.cs" />
     <Compile Include="SubmitActions\AddTeamContacts.cs" />
   </ItemGroup>
   <ItemGroup>
