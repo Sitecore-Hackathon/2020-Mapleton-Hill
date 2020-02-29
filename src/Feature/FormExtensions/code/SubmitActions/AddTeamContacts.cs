@@ -44,43 +44,65 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
             Assert.ArgumentNotNull(data, nameof(data));
             Assert.ArgumentNotNull(formSubmitContext, nameof(formSubmitContext));
 
-            var teamMembers = new TeamMember[3] {
+            string teamName = GetFieldValueById(data.TeamNameFieldId, formSubmitContext.Fields);
+            string teamMemberOneEmail = GetFieldValueById(data.TeamMemberOneEmailFieldId, formSubmitContext.Fields);
+            string teamMemberTwoEmail = GetFieldValueById(data.TeamMemberTwoEmailFieldId, formSubmitContext.Fields);
+            string teamMemberThreeEmail = GetFieldValueById(data.TeamMemberThreeEmailFieldId, formSubmitContext.Fields);
+
+            if (string.IsNullOrEmpty(teamMemberOneEmail) 
+                && string.IsNullOrEmpty(teamMemberTwoEmail) 
+                && string.IsNullOrEmpty(teamMemberThreeEmail))
+            {
+                return false;
+            }
+
+            var teamMembers = new List<TeamMember> {
                 new TeamMember {
-                    TeamName = GetFieldById(data.TeamNameFieldId, formSubmitContext.Fields),
-                    Email = GetFieldById(data.TeamMemberOneEmailFieldId, formSubmitContext.Fields),
-                    Twitter = GetFieldById(data.TeamMemberOneTwitterFieldId, formSubmitContext.Fields),
-                    LinkedIn = GetFieldById(data.TeamMemberOneLinkedInFieldId, formSubmitContext.Fields),
-                    FirstName = GetFieldById(data.TeamMemberOneFirstNameFieldId, formSubmitContext.Fields),
-                    LastName = GetFieldById(data.TeamMemberOneLastNameFieldId, formSubmitContext.Fields),
-                    City = GetFieldById(data.TeamMemberOneCityFieldId, formSubmitContext.Fields),
-                    State = GetFieldById(data.TeamMemberOneStateFieldId, formSubmitContext.Fields),
-                    Country = GetFieldById(data.TeamMemberOneCountryFieldId, formSubmitContext.Fields)
-                },
-                new TeamMember {
-                    TeamName = GetFieldById(data.TeamNameFieldId, formSubmitContext.Fields),
-                    Email = GetFieldById(data.TeamMemberTwoEmailFieldId, formSubmitContext.Fields),
-                    Twitter = GetFieldById(data.TeamMemberTwoTwitterFieldId, formSubmitContext.Fields),
-                    LinkedIn = GetFieldById(data.TeamMemberTwoLinkedInFieldId, formSubmitContext.Fields),
-                    FirstName = GetFieldById(data.TeamMemberTwoFirstNameFieldId, formSubmitContext.Fields),
-                    LastName = GetFieldById(data.TeamMemberTwoLastNameFieldId, formSubmitContext.Fields),
-                    City = GetFieldById(data.TeamMemberTwoCityFieldId, formSubmitContext.Fields),
-                    State = GetFieldById(data.TeamMemberTwoStateFieldId, formSubmitContext.Fields),
-                    Country = GetFieldById(data.TeamMemberTwoCountryFieldId, formSubmitContext.Fields)
-                },
-                new TeamMember {
-                    TeamName = GetFieldById(data.TeamNameFieldId, formSubmitContext.Fields),
-                    Email = GetFieldById(data.TeamMemberThreeEmailFieldId, formSubmitContext.Fields),
-                    Twitter = GetFieldById(data.TeamMemberThreeTwitterFieldId, formSubmitContext.Fields),
-                    LinkedIn = GetFieldById(data.TeamMemberThreeLinkedInFieldId, formSubmitContext.Fields),
-                    FirstName = GetFieldById(data.TeamMemberThreeFirstNameFieldId, formSubmitContext.Fields),
-                    LastName = GetFieldById(data.TeamMemberThreeLastNameFieldId, formSubmitContext.Fields),
-                    City = GetFieldById(data.TeamMemberThreeCityFieldId, formSubmitContext.Fields),
-                    State = GetFieldById(data.TeamMemberThreeStateFieldId, formSubmitContext.Fields),
-                    Country = GetFieldById(data.TeamMemberThreeCountryFieldId, formSubmitContext.Fields)
-                }
+                    TeamName = teamName,
+                    Email = teamMemberOneEmail,
+                    Twitter = GetFieldValueById(data.TeamMemberOneTwitterFieldId, formSubmitContext.Fields),
+                    LinkedIn = GetFieldValueById(data.TeamMemberOneLinkedInFieldId, formSubmitContext.Fields),
+                    FirstName = GetFieldValueById(data.TeamMemberOneFirstNameFieldId, formSubmitContext.Fields),
+                    LastName = GetFieldValueById(data.TeamMemberOneLastNameFieldId, formSubmitContext.Fields),
+                    City = GetFieldValueById(data.TeamMemberOneCityFieldId, formSubmitContext.Fields),
+                    State = GetFieldValueById(data.TeamMemberOneStateFieldId, formSubmitContext.Fields),
+                    Country = GetFieldValueById(data.TeamMemberOneCountryFieldId, formSubmitContext.Fields)
+                } 
             };
 
-            if (teamMembers.All(tm => GetValue(tm.Email) == null))
+            if (!string.IsNullOrEmpty(teamMemberTwoEmail))
+            {
+                teamMembers.Add(new TeamMember
+                {
+                    TeamName = teamName,
+                    Email = teamMemberTwoEmail,
+                    Twitter = GetFieldValueById(data.TeamMemberTwoTwitterFieldId, formSubmitContext.Fields),
+                    LinkedIn = GetFieldValueById(data.TeamMemberTwoLinkedInFieldId, formSubmitContext.Fields),
+                    FirstName = GetFieldValueById(data.TeamMemberTwoFirstNameFieldId, formSubmitContext.Fields),
+                    LastName = GetFieldValueById(data.TeamMemberTwoLastNameFieldId, formSubmitContext.Fields),
+                    City = GetFieldValueById(data.TeamMemberTwoCityFieldId, formSubmitContext.Fields),
+                    State = GetFieldValueById(data.TeamMemberTwoStateFieldId, formSubmitContext.Fields),
+                    Country = GetFieldValueById(data.TeamMemberTwoCountryFieldId, formSubmitContext.Fields)
+                });
+            }
+
+            if (!string.IsNullOrEmpty(teamMemberThreeEmail))
+            {
+                teamMembers.Add(new TeamMember
+                {
+                    TeamName = teamName,
+                    Email = teamMemberThreeEmail,
+                    Twitter = GetFieldValueById(data.TeamMemberThreeTwitterFieldId, formSubmitContext.Fields),
+                    LinkedIn = GetFieldValueById(data.TeamMemberThreeLinkedInFieldId, formSubmitContext.Fields),
+                    FirstName = GetFieldValueById(data.TeamMemberThreeFirstNameFieldId, formSubmitContext.Fields),
+                    LastName = GetFieldValueById(data.TeamMemberThreeLastNameFieldId, formSubmitContext.Fields),
+                    City = GetFieldValueById(data.TeamMemberThreeCityFieldId, formSubmitContext.Fields),
+                    State = GetFieldValueById(data.TeamMemberThreeStateFieldId, formSubmitContext.Fields),
+                    Country = GetFieldValueById(data.TeamMemberThreeCountryFieldId, formSubmitContext.Fields)
+                });
+            }
+
+            if (teamMembers.All(tm => string.IsNullOrEmpty(tm.Email)))
             {
                 return false;
             }
@@ -92,7 +114,7 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                     foreach (var teamMember in teamMembers)
                     {
                         var source = "Hackathon.Signup.Form";
-                        var id = $"{GetValue(teamMember.Email).ToLower()}";
+                        var id = $"{teamMember.Email.ToLower()}";
                         
                         var trackerIdentifier = new IdentifiedContactReference(source, id);
                         var expandOptions = new ContactExpandOptions(
@@ -101,9 +123,9 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
 
                         Contact contact = client.Get(trackerIdentifier, expandOptions);
 
-                        SetPersonalInformation(GetValue(teamMember.FirstName), GetValue(teamMember.LastName), contact, client);
-                        SetLocationInformation(GetValue(teamMember.City), GetValue(teamMember.State), GetValue(teamMember.Country), contact, client);
-                        SetEmail(GetValue(teamMember.Email), contact, client);
+                        SetPersonalInformation(teamMember.FirstName, teamMember.LastName, contact, client);
+                        SetLocationInformation(teamMember.City, teamMember.State, teamMember.Country, contact, client);
+                        SetEmail(teamMember.Email, contact, client);
 
                         client.Submit();
                     }
@@ -133,19 +155,10 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
         /// </summary>
         /// <param name="id">The identifier.</param>
         /// <param name="fields">The fields.</param>
-        /// <returns>The field with the specified <paramref name="id" />.</returns>
-        private static IViewModel GetFieldById(Guid id, IList<IViewModel> fields)
+        /// <returns>The field value with the specified <paramref name="id" />.</returns>
+        private static string GetFieldValueById(Guid id, IList<IViewModel> fields)
         {
-            return fields.FirstOrDefault(f => Guid.Parse(f.ItemId) == id);
-        }
-
-        /// <summary>
-        /// Gets the <paramref name="field" /> value.
-        /// </summary>
-        /// <param name="field">The field.</param>
-        /// <returns>The field value.</returns>
-        private static string GetValue(object field)
-        {
+            var field = fields.FirstOrDefault(f => Guid.Parse(f.ItemId) == id);
             return field?.GetType().GetProperty("Value")?.GetValue(field, null)?.ToString() ?? string.Empty;
         }
 

@@ -8,14 +8,14 @@ namespace Hackathon.Feature.FormExtensions.Models
 {
     public class TeamMember
     {
-        public IViewModel TeamName { get; set; }
-        public IViewModel Email { get; set; }
-        public IViewModel Twitter { get; set; }
-        public IViewModel LinkedIn { get; set; }
-        public IViewModel FirstName { get; set; }
-        public IViewModel LastName { get; set; }
-        public IViewModel City { get; set; }
-        public IViewModel State { get; set; }
-        public IViewModel Country { get; set; }
+        public string TeamName { get; set; }
+        public string Email { get; set; }
+        public string Twitter { get; set; }
+        public string LinkedIn { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Country { get; set; }
     }
 }
