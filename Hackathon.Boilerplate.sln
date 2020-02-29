@@ -48,9 +48,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormExtensions", "FormExtensions", "{F631F02A-806F-4A2E-877A-4B3A3E9DC861}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.FormExtensions", "src\Feature\FormExtensions\code\Hackathon.Feature.FormExtensions.csproj", "{9F8907F9-DB91-48C4-9051-99B8C0408374}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreHackathon", "SitecoreHackathon", "{2204B256-555F-4FAE-944E-D2539C96C0A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreHackathon.Website", "src\Project\SitecoreHackathon\code\SitecoreHackathon.Website.csproj", "{5536E771-C8FF-4E22-981D-F60A043DD033}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInjection", "DependencyInjection", "{F5BB3DF6-7665-439D-8DA5-FD74E5D6D596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.DependencyInjection", "src\Foundation\DependencyInjection\code\Hackathon.Foundation.DependencyInjection.csproj", "{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +83,10 @@ Global
 		{5536E771-C8FF-4E22-981D-F60A043DD033}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5536E771-C8FF-4E22-981D-F60A043DD033}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5536E771-C8FF-4E22-981D-F60A043DD033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,9 +103,11 @@ Global
 		{9F8907F9-DB91-48C4-9051-99B8C0408374} = {F631F02A-806F-4A2E-877A-4B3A3E9DC861}
 		{2204B256-555F-4FAE-944E-D2539C96C0A1} = {15D97D61-D597-42EC-B7E9-E9EC8130E630}
 		{5536E771-C8FF-4E22-981D-F60A043DD033} = {2204B256-555F-4FAE-944E-D2539C96C0A1}
+		{F5BB3DF6-7665-439D-8DA5-FD74E5D6D596} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A} = {F5BB3DF6-7665-439D-8DA5-FD74E5D6D596}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
+		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
 	EndGlobalSection
 EndGlobal
