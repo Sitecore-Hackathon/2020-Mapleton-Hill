@@ -1,0 +1,8 @@
+﻿@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc
+@using Hackathon.Feature.SharedComponents.RichText
+@using Glass.Mapper.Sc.Web.Mvc
+
+@model IRichTextSection
+
+@Html.Glass().Editable(Model, r => r.Text)
