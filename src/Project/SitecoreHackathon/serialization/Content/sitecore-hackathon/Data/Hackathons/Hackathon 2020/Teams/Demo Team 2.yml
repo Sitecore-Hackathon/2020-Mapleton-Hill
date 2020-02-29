@@ -16,12 +16,3 @@ Languages:
       Hint: Countries
       Type: Multilist
       Value: "{29858399-B591-415C-AC3B-A388DA362575}"
-    - ID: "dfc01ac8-1f9c-4fe0-8802-26c7fc09d2c3"
-      Hint: Name
-      Value: Demo Team 2
-    - ID: "e69cdcb6-506b-4a59-8d8d-6193fc85d87f"
-      Hint: Members
-      Type: Multilist
-      Value: |
-        {A865AE30-D678-4B49-AA62-AE05CA13B2E7}
-        {981493A6-D8EB-4293-B665-743429D32046}

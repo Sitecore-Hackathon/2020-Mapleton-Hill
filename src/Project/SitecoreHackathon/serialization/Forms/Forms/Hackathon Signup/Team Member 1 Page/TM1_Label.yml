@@ -1,0 +1,31 @@
+﻿---
+ID: "614fbec3-c884-44f9-92bc-a8d800d5354d"
+Parent: "0c22ebac-5464-4f42-9f5d-d08f79f51ae4"
+Template: "fc18f915-eac6-460a-8777-6e1376a9ea09"
+Path: /sitecore/Forms/Hackathon Signup/Team Member 1 Page/TM1_Label
+DB: master
+SharedFields:
+- ID: "71c6de8e-4718-4977-b83e-b49552ee14b0"
+  Hint: Conditions
+  Value: |
+    {"fieldConditions":[]}
+- ID: "84ece662-5034-40cb-9c60-744db64bb294"
+  Hint: Field Key
+  Value: B141BC22DE8242DF8D560D63EBFEFCA8
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "c6caa979-c3ac-4ffc-861e-2961f5fc3c48"
+  Hint: Html Tag
+  Value: h3
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T081738Z
+    - ID: "9666782b-21bb-40ce-b38f-8f6c53fa5070"
+      Hint: Text
+      Value: Team Memeber #1
