@@ -14,7 +14,7 @@ SharedFields:
   Value: E7581CCB7036414A9A55D8CBE7487237
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 100
+  Value: 200
 Languages:
 - Language: en
   Versions:

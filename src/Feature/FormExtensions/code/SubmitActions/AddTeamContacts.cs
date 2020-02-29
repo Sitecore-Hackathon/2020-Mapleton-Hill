@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Hackathon.Feature.FormExtensions.Models;
+using Sitecore.Data;
+using Sitecore.Data.Fields;
+using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.ExperienceForms.Models;
 using Sitecore.ExperienceForms.Processing;
@@ -52,8 +55,6 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                     LinkedIn = GetFieldValueByName($"TM{i}_LinkedInUrl", formSubmitContext.Fields),
                     FirstName = GetFieldValueByName($"TM{i}_FirstName", formSubmitContext.Fields),
                     LastName = GetFieldValueByName($"TM{i}_LastName", formSubmitContext.Fields),
-                    City = GetFieldValueByName($"TM{i}_City", formSubmitContext.Fields),
-                    State = GetFieldValueByName($"TM{i}_State", formSubmitContext.Fields),
                     Country = GetFieldValueByName($"TM{i}_Country", formSubmitContext.Fields),
                 });
 
@@ -69,23 +70,36 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
             {
                 try
                 {
+                    Database db = Sitecore.Configuration.Factory.GetDatabase("master");
+                    Guid teamId = CreateTeam(teamName, teamMembers, db);
                     foreach (var teamMember in teamMembers)
                     {
-                        var source = "Hackathon.Signup.Form";
-                        var id = $"{teamMember.Email.ToLower()}";
+                        var source = $"Hackathon.Signup.{teamId.ToString("N")}";
+                        var identifier = $"{teamMember.Email.ToLower()}";
                         
-                        var trackerIdentifier = new IdentifiedContactReference(source, id);
+                        var trackerIdentifier = new IdentifiedContactReference(source, identifier);
                         var expandOptions = new ContactExpandOptions(
                             CollectionModel.FacetKeys.PersonalInformation,
                             CollectionModel.FacetKeys.EmailAddressList);
 
                         Contact contact = client.Get(trackerIdentifier, expandOptions);
 
+                        if (contact == null)
+                        {
+                            var contactIdentifiers = new[]
+                            {
+                                new ContactIdentifier(source, identifier, ContactIdentifierType.Known)
+                            };
+
+                            contact = new Contact(contactIdentifiers);
+                        }
+
                         SetPersonalInformation(teamMember.FirstName, teamMember.LastName, contact, client);
-                        SetLocationInformation(teamMember.City, teamMember.State, teamMember.Country, contact, client);
                         SetEmail(teamMember.Email, contact, client);
 
                         client.Submit();
+
+                        CreateTeamMember(teamMember, contact, db);
                     }
                 }
                 catch (Exception ex)
@@ -95,6 +109,87 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                 }
             }
 
+            return true;
+        }
+
+        private void CreateTeamMember(TeamMember teamMember, Contact contact, Database db)
+        {
+            var memberTemplate = db.GetTemplate(SitecoreConstants.MemberTemplateId);
+            var participantsFolder = db.GetItem(SitecoreConstants.ParticipantsFolderId);
+            Item member = participantsFolder.Add($"{teamMember.FirstName} {teamMember.LastName}", memberTemplate);
+            if (member != null)
+            {
+                member.Editing.BeginEdit();
+                member["FirstName"] = teamMember.FirstName;
+                member["LastName"] = teamMember.LastName;
+                member["Email"] = teamMember.Email;
+                member["xDb Contact Id"] = contact.Id.ToString();
+                member.Editing.EndEdit();
+
+                // create link folder
+                var linkFolderTemplate = db.GetTemplate(SitecoreConstants.LinkFolderTemplateId);
+                Item linkFolder = member.Add("Links", linkFolderTemplate);
+
+                if (!string.IsNullOrEmpty(teamMember.Twitter))
+                {
+                    if (teamMember.Twitter.Contains("twitter.com") && IsUrlValid(teamMember.Twitter))
+                    {
+                        var linkTemplate = db.GetTemplate(SitecoreConstants.LinkTemplateId);
+                        var twitterLink = linkFolder.Add("Twitter", linkTemplate);
+                        member.Editing.BeginEdit();
+                        twitterLink["Link"] = teamMember.Twitter;
+                        twitterLink["Type"] = SitecoreConstants.TitterLinkId;
+                        member.Editing.EndEdit();
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(teamMember.LinkedIn))
+                {
+                    if (teamMember.Twitter.Contains("linkedin.com") && IsUrlValid(teamMember.LinkedIn))
+                    {
+                        var linkTemplate = db.GetTemplate(SitecoreConstants.LinkTemplateId);
+                        var linkedInLink = linkFolder.Add("LinkedIn", linkTemplate);
+                        member.Editing.BeginEdit();
+                        linkedInLink["Link"] = teamMember.Twitter;
+                        linkedInLink["Type"] = SitecoreConstants.LinkedInLinkId;
+                        member.Editing.EndEdit();
+                    }
+                }
+            }
+        }
+
+        private bool IsUrlValid(string url)
+        {
+            return Uri.TryCreate(url, UriKind.Absolute, out Uri uriResult)
+                        && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+        }
+
+        private Guid CreateTeam(string teamName, IEnumerable<TeamMember> teamMembers, Database db)
+        {
+            var countries = teamMembers.Select(tm => tm.Country);
+            var teamTemplate = db.GetTemplate(SitecoreConstants.TeamTemplateId);
+            var currentTeamFolder = db.GetItem($"/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon {DateTime.Now.Year}/Teams");
+
+            // if name not found, add it
+            using (new Sitecore.SecurityModel.SecurityDisabler())
+            {
+                Item newItem = currentTeamFolder.Add(teamName, teamTemplate);
+                if (newItem != null)
+                {
+                    newItem.Editing.BeginEdit();
+                    newItem["Name"] = teamName;
+                    newItem["Countries"] = string.Join("|", countries);
+                    newItem.Editing.EndEdit();
+                }
+
+                return newItem.ID.ToGuid();
+            }
+        }
+
+        // This is the problematic method which needs to be overriden
+        protected override bool TryParse(string value, out string target)
+        {
+            target = string.Empty;
             return true;
         }
 
@@ -118,7 +213,7 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
             var field = fields.FirstOrDefault(f => f.Name == name);
             return field?.GetType().GetProperty("Value")?.GetValue(field, null)?.ToString() ?? string.Empty;
         }
-
+        
         /// <summary>
         /// Sets the <see cref="PersonalInformation"/> facet of the specified <paramref name="contact" />.
         /// </summary>
@@ -143,45 +238,6 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
             personalInfoFacet.LastName = lastName;
 
             client.SetPersonal(contact, personalInfoFacet);
-        }
-
-        /// <summary>
-        /// Sets the <see cref="AddressList"/> facet of the specified <paramref name="contact" />.
-        /// </summary>
-        /// <param name="city"></param>
-        /// <param name="state"></param>
-        /// <param name="country"></param>
-        /// <param name="contact"></param>
-        /// <param name="client"></param>
-        private static void SetLocationInformation(string city, string state, string country, Contact contact, IXdbContext client)
-        {
-            if (string.IsNullOrEmpty(country))
-            {
-                return;
-            }
-            
-            Address address = new Address
-            {
-                City = city,
-                StateOrProvince = state,
-                CountryCode = country
-            };
-            AddressList addressFacet = contact.Addresses();
-            if (addressFacet == null)
-            {
-                addressFacet = new AddressList(address, "Preferred");
-            }
-            else
-            {
-                if (addressFacet.PreferredAddress?.CountryCode == country)
-                {
-                    return;
-                }
-
-                addressFacet.PreferredAddress = address;
-            }
-
-            client.SetAddresses(contact, addressFacet);
         }
 
         /// <summary>

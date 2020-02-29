@@ -21,7 +21,7 @@ SharedFields:
     {"fieldConditions":[]}
 - ID: "78778432-6327-4cea-a28b-e190e3541d28"
   Hint: Value Field Name
-  Value: __ItemName
+  Value: __ID
 - ID: "7abaa3f6-6ec0-4b65-a463-7919bfae55aa"
   Hint: Css Class
   Value: "form-control"
@@ -30,7 +30,7 @@ SharedFields:
   Value: 57A099E9AECC4B74808D39DEE8CCF6A0
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 200
+  Value: 0
 Languages:
 - Language: en
   Versions:

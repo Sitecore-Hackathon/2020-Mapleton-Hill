@@ -14,7 +14,7 @@ SharedFields:
   Value: B141BC22DE8242DF8D560D63EBFEFCA8
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 0
+  Value: 100
 - ID: "c6caa979-c3ac-4ffc-861e-2961f5fc3c48"
   Hint: Html Tag
   Value: h3

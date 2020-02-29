@@ -14,7 +14,7 @@ SharedFields:
   Value: 3B3C90535CED4EE7AF675502673128F3
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 800
+  Value: 900
 - ID: "c6caa979-c3ac-4ffc-861e-2961f5fc3c48"
   Hint: Html Tag
   Value: h3
