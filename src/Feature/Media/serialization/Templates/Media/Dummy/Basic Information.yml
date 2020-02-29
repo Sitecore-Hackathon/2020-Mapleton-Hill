@@ -1,0 +1,14 @@
+﻿---
+ID: "535b0fa3-9001-4647-9742-4d02c8ebb1ac"
+Parent: "d6ecc2ed-3755-4621-8e99-5a5f6b081ba7"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Media/Dummy/Basic Information
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T042202Z
