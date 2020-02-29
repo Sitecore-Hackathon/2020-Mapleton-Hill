@@ -247,6 +247,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="public\css\main.css" />
     <Content Include="Views\Layouts\Default.cshtml" />
     <Content Include="App_Config\Include\Project\SitecoreHackathon.Website.config" />
     <Content Include="App_Config\Include\Project\SitecoreHackathon.Website.Serialization.config" />
