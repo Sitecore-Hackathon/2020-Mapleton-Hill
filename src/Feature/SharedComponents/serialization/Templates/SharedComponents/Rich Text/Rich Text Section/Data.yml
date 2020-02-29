@@ -1,0 +1,14 @@
+﻿---
+ID: "8ed26d4d-af4f-4326-8b0b-562de873abf2"
+Parent: "5bfe17dc-fbe3-4310-83c3-5cf34a93fc85"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/SharedComponents/Rich Text/Rich Text Section/Data
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T155221Z

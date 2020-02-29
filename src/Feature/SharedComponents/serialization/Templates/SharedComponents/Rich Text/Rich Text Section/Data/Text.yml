@@ -1,8 +1,8 @@
 ﻿---
-ID: "e05e8930-ef13-428d-a86b-cfcbb8a73033"
-Parent: "f3c58ff5-2e54-4a73-a8af-3b0901848917"
+ID: "47fa45c7-30c2-42e3-970b-4f8f7cc4b6e0"
+Parent: "8ed26d4d-af4f-4326-8b0b-562de873abf2"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Hackathon/Hackathon/Data/Prices
+Path: /sitecore/templates/Feature/SharedComponents/Rich Text/Rich Text Section/Data/Text
 DB: master
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
@@ -10,7 +10,7 @@ SharedFields:
   Value: Rich Text
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 600
+  Value: 200
 Languages:
 - Language: en
   Versions:
@@ -18,4 +18,4 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20200229T033300Z
+      Value: 20200229T155221Z
