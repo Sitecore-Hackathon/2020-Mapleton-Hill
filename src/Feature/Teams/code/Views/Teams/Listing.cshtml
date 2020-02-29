@@ -1,0 +1,25 @@
+﻿@using Hackathon.Feature.Teams.ViewModels
+@using Hackathon.Feature.Teams
+@model TeamsListingViewModel
+
+<h2>@Model.TeamsHeader</h2>
+<div class="teams-listing card-deck">
+    @foreach (IBasicTeam team in Model.Teams)
+    {
+        <div class="shadow-sm p-0 mb-5 bg-white rounded card">
+            <div class="card-header">
+                <h5 class="card-title">@team.Name</h5>
+            </div>
+            <div class="card-body">                
+                <ul>
+                    <li>Member 1</li>
+                    <li>Member 2</li>
+                    <li>Member 3</li>
+                </ul>
+            </div>
+            <div class="card-footer rounded-0">
+                Country, Country
+            </div>
+        </div>
+    }
+</div>
