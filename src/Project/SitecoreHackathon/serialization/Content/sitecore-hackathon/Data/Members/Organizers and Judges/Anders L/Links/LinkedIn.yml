@@ -1,0 +1,21 @@
+﻿---
+ID: "d29cf5d1-819f-4992-bc29-e3ee859b3d47"
+Parent: "f299dae0-2423-45c3-ac56-11417ef31fa7"
+Template: "638c8bd6-075e-472e-b597-a6158c3d2cad"
+Path: "/sitecore/content/sitecore-hackathon/Data/Members/Organizers and Judges/Anders L/Links/LinkedIn"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T060734Z
+    - ID: "ad7a0ec6-dad4-402b-a682-ffeb97eb8e97"
+      Hint: Type
+      Value: "{B933B4D7-4E68-4F83-A3B9-C20B235653B0}"
+    - ID: "ecb91d6c-a890-463e-9786-c632de10619c"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://www.linkedin.com/in/anderslaub/" anchor="" target="_blank" />

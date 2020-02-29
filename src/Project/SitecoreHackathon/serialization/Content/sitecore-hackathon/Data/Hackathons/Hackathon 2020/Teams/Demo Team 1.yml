@@ -1,0 +1,28 @@
+﻿---
+ID: "6a46d59f-1499-4f17-87a0-4cda2e04b2c2"
+Parent: "a7e44000-1ec6-4edb-8c28-e8585479ff57"
+Template: "698d10c2-c3d1-4e97-9f1c-11b3b8694ee5"
+Path: "/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon 2020/Teams/Demo Team 1"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T061934Z
+    - ID: "60205e30-0fa0-4353-a48e-992e172b95ab"
+      Hint: Countries
+      Type: Multilist
+      Value: "{29D83290-D5E0-4F5D-A21C-5535785716BA}"
+    - ID: "dfc01ac8-1f9c-4fe0-8802-26c7fc09d2c3"
+      Hint: Name
+      Value: Demo Team 1
+    - ID: "e69cdcb6-506b-4a59-8d8d-6193fc85d87f"
+      Hint: Members
+      Type: Multilist
+      Value: |
+        {E2889EEA-E3E1-4769-A821-5FE56BDA9F5E}
+        {3561BCD4-3083-4118-9673-1AEF1011D2B9}
+        {57D47CC4-1788-41DA-B1D6-B0C11BCC7B6C}

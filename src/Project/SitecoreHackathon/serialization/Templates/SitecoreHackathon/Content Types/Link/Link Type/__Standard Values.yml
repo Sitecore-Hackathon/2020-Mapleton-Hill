@@ -1,0 +1,25 @@
+﻿---
+ID: "4869b2c9-d61a-4521-bc73-3ddad9f376ed"
+Parent: "c9b93caf-1f84-43ca-a701-c925ee5720f1"
+Template: "c9b93caf-1f84-43ca-a701-c925ee5720f1"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Link/Link Type/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Network/32x32/link_new.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T040304Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8b0c60cc-79c8-4a1f-ba41-6549188da8e9"
+      Hint: Name
+      Value: $name

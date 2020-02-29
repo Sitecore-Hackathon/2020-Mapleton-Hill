@@ -1,0 +1,21 @@
+﻿---
+ID: "2b64d5e8-0542-4429-ba1c-aefe4a81dec3"
+Parent: "826b136a-3f56-4ef3-b0b9-4646dbf4eb7c"
+Template: "638c8bd6-075e-472e-b597-a6158c3d2cad"
+Path: "/sitecore/content/sitecore-hackathon/Data/Members/Organizers and Judges/Akshay S/Links/Twitter"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T060858Z
+    - ID: "ad7a0ec6-dad4-402b-a682-ffeb97eb8e97"
+      Hint: Type
+      Value: "{236DFC63-7045-4EBC-A9F5-0C3391E230C7}"
+    - ID: "ecb91d6c-a890-463e-9786-c632de10619c"
+      Hint: Link
+      Value: |
+        <link linktype="external" url="https://twitter.com/akshaysura13" anchor="" target="_blank" />

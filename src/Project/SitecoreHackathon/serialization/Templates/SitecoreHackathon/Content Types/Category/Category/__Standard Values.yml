@@ -1,0 +1,25 @@
+﻿---
+ID: "62e63e15-1482-4881-a89f-09206b2efa7c"
+Parent: "4f4992dd-0d5b-4dfc-a746-4969a8ade963"
+Template: "4f4992dd-0d5b-4dfc-a746-4969a8ade963"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Category/Category/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Applications/32x32/bookmark.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T034227Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "98077ce8-27bf-4736-af67-287b709740a9"
+      Hint: Name
+      Value: $name

@@ -1,0 +1,14 @@
+﻿---
+ID: "42e04f70-2520-4431-bef3-ca849977b1d6"
+Parent: "6da35172-3775-4f53-b92e-dfaf1405f979"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Faq/Faq/Data
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T034825Z

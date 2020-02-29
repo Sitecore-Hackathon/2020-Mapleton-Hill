@@ -1,0 +1,20 @@
+﻿---
+ID: "820307d2-4801-493b-9336-b30215579eb2"
+Parent: "218ee4a8-c4ba-4e48-b0b0-0dbccdc04566"
+Template: "1597e081-4fc1-437a-83aa-66ee91426978"
+Path: "/sitecore/content/sitecore-hackathon/Data/Members/Participants/Joe"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T050310Z
+    - ID: "3c08dd19-ab12-4308-89e6-232f9e70bc2b"
+      Hint: First Name
+      Value: Joe
+    - ID: "890576da-fd4b-4f25-bd74-0a3f1b636d34"
+      Hint: Last Name
+      Value: F

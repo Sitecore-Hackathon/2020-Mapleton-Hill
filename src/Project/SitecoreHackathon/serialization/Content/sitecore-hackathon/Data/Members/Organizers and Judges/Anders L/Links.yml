@@ -1,0 +1,14 @@
+﻿---
+ID: "f299dae0-2423-45c3-ac56-11417ef31fa7"
+Parent: "cfd74d0b-931d-4532-919b-958413bbed77"
+Template: "97726ae2-fc3d-42eb-a2e8-83121cab1a4f"
+Path: "/sitecore/content/sitecore-hackathon/Data/Members/Organizers and Judges/Anders L/Links"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T060711Z

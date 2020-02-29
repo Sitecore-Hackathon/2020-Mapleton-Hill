@@ -1,0 +1,47 @@
+﻿---
+ID: "af4f05b1-f1fd-4094-aeaf-92173960483d"
+Parent: "7545cb43-5122-41a5-a70f-5d8c97e47ab1"
+Template: "7e8ce5d4-a011-43b2-92b3-9eade6dd6be0"
+Path: "/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon 2020"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "09f4b863-5186-4d79-a69d-a7651c5c1a97"
+      Hint: Faqs
+      Type: Multilist
+      Value: |
+        {B2BC0E64-DA40-4679-8166-01496290E619}
+        {FE04AA1F-A50C-4A8C-8105-38D957CC643E}
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T043730Z
+    - ID: "318ce769-24ad-4d20-956e-79bb49983695"
+      Hint: Title
+      Value: Hackathon 2020
+    - ID: "3c619bb3-5055-4c4f-ac75-7ab529be4983"
+      Hint: Winners
+      Type: Multilist
+      Value: "{DC5F11DA-D118-447F-B5F4-3F3902D9E358}"
+    - ID: "51eb59b5-239c-429e-bcfb-bf3fb0baf8d3"
+      Hint: Year
+      Value: 2020
+    - ID: "ad0a6c13-a4a3-456e-ba48-cda05e365533"
+      Hint: Judges
+      Type: Multilist
+      Value: |
+        {CFD74D0B-931D-4532-919B-958413BBED77}
+        {602BE5BD-3E5B-4018-B9B0-24677974717A}
+        {CCF39C16-2093-43BB-93D3-BA8AB3B93EC2}
+    - ID: "b0800f81-2fbb-4c4f-bc00-b9ecd23e5690"
+      Hint: Start Date
+      Value: 20200229T010000Z
+    - ID: "c6a69aed-ad1a-4809-8fcd-098823899c7b"
+      Hint: End Date
+      Value: 20200301T010000Z

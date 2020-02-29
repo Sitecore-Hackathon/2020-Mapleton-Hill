@@ -1,0 +1,25 @@
+﻿---
+ID: "df23c5ab-25a8-4590-94ac-5916b7dea4ee"
+Parent: "c366ab7e-1fa5-4f5b-a5a6-bbd206214abe"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Project/Project Folder
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: software/32x32/console.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: "{A87A00B1-E6DB-45AB-8B54-636FEC3B5523}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{685E5B58-3C45-41D6-9C02-4E0D2F6B32BF}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T042627Z

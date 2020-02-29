@@ -1,0 +1,20 @@
+﻿---
+ID: "5e81cb9c-089d-4e00-ade9-bfcdde895bc2"
+Parent: "1f02d22a-05f0-4fb0-a12c-f366b38a2ccd"
+Template: "04963490-e4fc-4574-b18f-40f6d880e127"
+Path: "/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon 2020/Teams/Demo Team 2/Project Marketplace"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T062116Z
+    - ID: "65803345-60be-42df-b5e9-855b2241d59f"
+      Hint: Category
+      Value: "{A5FC1647-9FDA-4CED-8369-7CCFB6D53226}"
+    - ID: "d1c29a4e-b003-4682-bfb7-064ddbf23712"
+      Hint: Name
+      Value: Project Marketplace

@@ -1,0 +1,20 @@
+﻿---
+ID: "b2bc0e64-da40-4679-8166-01496290e619"
+Parent: "41073d49-1586-4cbd-b7c9-b22824125b8b"
+Template: "6da35172-3775-4f53-b92e-dfaf1405f979"
+Path: "/sitecore/content/sitecore-hackathon/Data/Faqs/Members Number"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T050527Z
+    - ID: "2fb35266-e393-4244-9814-7a0adc2f06d9"
+      Hint: Answer
+      Value: There can only be 3 team members maximum in a team.
+    - ID: "6a5b72a6-f420-4e9d-837c-accc5350369e"
+      Hint: Question
+      Value: "How many members can be in each team?"

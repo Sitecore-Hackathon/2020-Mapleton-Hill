@@ -1,0 +1,14 @@
+﻿---
+ID: "826b136a-3f56-4ef3-b0b9-4646dbf4eb7c"
+Parent: "58980e4a-77b2-4ade-a80a-aba0a3c1f54f"
+Template: "97726ae2-fc3d-42eb-a2e8-83121cab1a4f"
+Path: "/sitecore/content/sitecore-hackathon/Data/Members/Organizers and Judges/Akshay S/Links"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T060850Z
