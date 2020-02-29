@@ -1,0 +1,31 @@
+﻿---
+ID: "f77653cc-5f6f-49f5-9e01-cea5c8079359"
+Parent: "0254ae4a-3b39-44a6-b9ea-c740341af70e"
+Template: "0254ae4a-3b39-44a6-b9ea-c740341af70e"
+Path: /sitecore/templates/Project/SitecoreHackathon/Page Types/Home/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/home.png
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{A4109002-1B42-4F06-AA9F-7F8B89CB97EE}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T055849Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
