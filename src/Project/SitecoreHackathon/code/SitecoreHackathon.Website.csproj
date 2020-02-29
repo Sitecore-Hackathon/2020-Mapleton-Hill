@@ -250,6 +250,7 @@
     <Content Include="Views\Layouts\Default.cshtml" />
     <Content Include="App_Config\Include\Project\SitecoreHackathon.Website.config" />
     <Content Include="App_Config\Include\Project\SitecoreHackathon.Website.Serialization.config" />
+    <Content Include="Views\Web.config" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
