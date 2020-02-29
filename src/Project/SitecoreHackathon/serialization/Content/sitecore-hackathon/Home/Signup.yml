@@ -16,7 +16,8 @@ SharedFields:
         <r
           uid="{2C901A0A-B7C7-4741-AFE0-7A29997C380C}"
           s:ds="{3B88CD5F-9940-40C5-B305-BA0D6FE75D21}"
-          s:par="" />
+          s:par=""
+          s:ph="main" />
       </d>
     </r>
 Languages:
