@@ -259,6 +259,9 @@
     <Content Include="App_Config\Include\Feature\Feature.SharedComponents.Serialization.config" />
     <Content Include="CodeGen.config" />
     <Content Include="Views\SharedComponents\Rich Text.cshtml" />
+    <Content Include="Views\SharedComponents\Grid\100.cshtml" />
+    <Content Include="Views\SharedComponents\Grid\50-50.cshtml" />
+    <Content Include="Views\SharedComponents\Grid\33-33-33.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
