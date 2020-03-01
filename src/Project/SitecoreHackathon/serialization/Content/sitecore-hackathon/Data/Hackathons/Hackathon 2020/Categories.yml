@@ -1,0 +1,18 @@
+﻿---
+ID: "2e2ffe31-7141-42ba-b397-fe225a377d1c"
+Parent: "af4f05b1-f1fd-4094-aeaf-92173960483d"
+Template: "88cf098b-dad5-4843-af6c-ab2c972afeb5"
+Path: "/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon 2020/Categories"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T043813Z

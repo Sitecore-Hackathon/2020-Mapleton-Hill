@@ -1,0 +1,35 @@
+﻿---
+ID: "ccaf86a1-e929-4a96-bac4-98e4003801ef"
+Parent: "7a408031-81e0-487a-abae-419ea9209e58"
+Template: "7a408031-81e0-487a-abae-419ea9209e58"
+Path: /sitecore/templates/Project/SitecoreHackathon/Page Types/General Page/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/32x32/document_text.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{7A408031-81E0-487A-ABAE-419EA9209E58}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r>
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{A4109002-1B42-4F06-AA9F-7F8B89CB97EE}" />
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T224348Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

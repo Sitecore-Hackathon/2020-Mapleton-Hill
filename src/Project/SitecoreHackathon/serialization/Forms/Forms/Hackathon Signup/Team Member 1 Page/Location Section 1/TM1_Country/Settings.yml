@@ -1,0 +1,14 @@
+﻿---
+ID: "7e653c6f-ba7e-4c1b-885d-f0535ff50d77"
+Parent: "ed072c95-bcfd-4959-a625-4952550fd12d"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/Forms/Hackathon Signup/Team Member 1 Page/Location Section 1/TM1_Country/Settings
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T013833Z

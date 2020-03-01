@@ -1,0 +1,17 @@
+﻿---
+ID: "236dfc63-7045-4ebc-a9f5-0c3391e230c7"
+Parent: "22c94449-5db7-4bde-83b6-a0c350ba2508"
+Template: "c9b93caf-1f84-43ca-a701-c925ee5720f1"
+Path: "/sitecore/content/sitecore-hackathon/Data/Link Types/Twitter"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T045404Z
+    - ID: "8b0c60cc-79c8-4a1f-ba41-6549188da8e9"
+      Hint: Name
+      Value: Twitter

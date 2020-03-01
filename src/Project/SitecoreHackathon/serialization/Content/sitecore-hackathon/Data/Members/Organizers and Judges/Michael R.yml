@@ -1,0 +1,20 @@
+﻿---
+ID: "ccf39c16-2093-43bb-93d3-ba8ab3b93ec2"
+Parent: "3642c8d2-7c73-407e-a7ef-a8bdc109788d"
+Template: "1597e081-4fc1-437a-83aa-66ee91426978"
+Path: "/sitecore/content/sitecore-hackathon/Data/Members/Organizers and Judges/Michael R"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T051455Z
+    - ID: "3c08dd19-ab12-4308-89e6-232f9e70bc2b"
+      Hint: First Name
+      Value: Michael 
+    - ID: "890576da-fd4b-4f25-bd74-0a3f1b636d34"
+      Hint: Last Name
+      Value: R

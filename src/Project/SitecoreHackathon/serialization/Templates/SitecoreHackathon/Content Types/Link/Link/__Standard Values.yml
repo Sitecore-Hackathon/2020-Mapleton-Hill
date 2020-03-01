@@ -1,0 +1,18 @@
+﻿---
+ID: "c65c458e-e127-4789-95b7-63e9d14c7e53"
+Parent: "638c8bd6-075e-472e-b597-a6158c3d2cad"
+Template: "638c8bd6-075e-472e-b597-a6158c3d2cad"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Link/Link/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T035256Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

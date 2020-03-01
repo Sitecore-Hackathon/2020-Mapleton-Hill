@@ -1,0 +1,21 @@
+﻿---
+ID: "29d83290-d5e0-4f5d-a21c-5535785716ba"
+Parent: "20572644-9ee5-4533-9d72-97de81f8d6f2"
+Template: "c9a92242-3dc4-4ffb-9192-2eb625b04453"
+Path: "/sitecore/content/sitecore-hackathon/Data/Countries/USA"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 50
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T045220Z
+    - ID: "9b4a9d8c-4ed2-432b-bc1f-cd7f52e4f1a3"
+      Hint: Name
+      Value: USA

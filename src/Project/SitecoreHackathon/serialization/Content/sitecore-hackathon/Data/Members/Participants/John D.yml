@@ -1,0 +1,14 @@
+﻿---
+ID: "3561bcd4-3083-4118-9673-1aef1011d2b9"
+Parent: "218ee4a8-c4ba-4e48-b0b0-0dbccdc04566"
+Template: "1597e081-4fc1-437a-83aa-66ee91426978"
+Path: "/sitecore/content/sitecore-hackathon/Data/Members/Participants/John D"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T061641Z

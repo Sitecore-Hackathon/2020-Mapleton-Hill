@@ -1,0 +1,14 @@
+﻿---
+ID: "f1848b79-5e1c-4f56-b2e8-f76c81c50f96"
+Parent: "1597e081-4fc1-437a-83aa-66ee91426978"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Member/Member/Data
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T033519Z

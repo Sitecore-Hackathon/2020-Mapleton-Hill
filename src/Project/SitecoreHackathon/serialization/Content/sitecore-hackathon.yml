@@ -1,0 +1,18 @@
+﻿---
+ID: "f3dc048e-5a43-49fd-a474-b937e1770203"
+Parent: "0de95ae4-41ab-4d01-9eb0-67441b7c2450"
+Template: "7a50be3a-dcf8-4904-8d37-323a327d630d"
+Path: "/sitecore/content/sitecore-hackathon"
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Sitecore Hackathon
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T060156Z

@@ -1,71 +1,48 @@
-# Documentation
-
-The documentation for this years Hackathon must be provided as a readme in Markdown format as part of your submission. 
-
-You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
-
-Examples of things to include are the following.
+# Sitecore-Driven Hackathon Website
 
 ## Summary
 
-**Category:** Hackathon Category
+**Category:** Sitecore Hackathon Website
 
-What is the purpose of your module? What problem does it solve and how does it do that?
+Every year requires teams to sign-up for the hackathon and being able to flexibly manage that content.  The rebuild of the Hackathon Website was built with taking advantage of the best features of the Experience Plaform such as Sitecore Forms integration, integrated teams listing component and integration of participants into xDB.  The goal was to start a foundation to build a stronger experience for the hackathon participants.
 
 ## Pre-requisites
 
-Does your module rely on other Sitecore modules or frameworks?
+The solution depends on the following:
 
-- List any dependencies
-- Or other modules that must be installed
-- Or services that must be enabled/configured
+- Sitecore 9.3 Initial Release
+- Sitecore Forms
+- xDB must be enabled
+
+Before installing the website, the following changes will need to be made under the Visual Studio solution:
+
+1. Update the source folder under src\Foundation\Serialization\code\App_Config\Include\zzz\z.DevSettings.config to where the project has been setup on the machine.
+2. Create a publishsettings.targets.user file and update the publishUrl to the URL Sitecore 9.3 is setup.
 
 ## Installation
 
-Provide detailed instructions on how to install the module, and include screenshots where necessary.
+Deploying the new Hackathon Website requires publishing the various projects in Visual Studio as listed below:
 
-1. Use the Sitecore Installation wizard to install the [package](#link-to-package)
-2. ???
-3. Profit
-
-## Configuration
-
-How do you configure your module once it is installed? Are there items that need to be updated with settings, or maybe config files need to have keys updated?
-
-Remember you are using Markdown, you can provide code samples too:
-
-```xml
-<?xml version="1.0"?>
-<!--
-  Purpose: Configuration settings for my hackathon module
--->
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
-  <sitecore>
-    <settings>
-      <setting name="MyModule.Setting" value="Hackathon" />
-    </settings>
-  </sitecore>
-</configuration>
-```
+1. Hackathon.Foundation.Serialization
+2. Hackathon.Foundation.DependencyInjection
+3. Hackathon.Foundation.DataAccess
+4. Hackathon.Feature.FormExtensions
+5. Hackathon.Feature.Media
+6. Hackathon.Feature.Navigation
+7. Hackathon.Feature.Newsletter
+8. Hackathon.Feature.SharedComponents
+9. Hackathon.Feature.Signup
+10. Hackathon.Feature.Teams
+11. SitecoreHackathon.Website
 
 ## Usage
 
-Provide documentation  about your module, how do the users use your module, where are things located, what do icons mean, are there any secret shortcuts etc.
+The site was built with the following components:
 
-Please include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
+1. Teams Listing Component
 
-![Hackathon Logo](images/hackathon.png?raw=true "Hackathon Logo")
+![Teams Listing Component](images/teams-listing.png?raw=true "Teams Listing Component")
 
-You can embed images of different formats too:
+2. Hackathons, Teams and Participates can be managed from Sitecore
 
-![Deal With It](images/deal-with-it.gif?raw=true "Deal With It")
-
-And you can embed external images too:
-
-![Random](https://placeimg.com/480/240/any "Random")
-
-## Video
-
-Please provide a video highlighing your Hackathon module submission and provide a link to the video. Either a [direct link](https://www.youtube.com/watch?v=EpNhxW4pNKk) to the video, upload it to this documentation folder or maybe upload it to Youtube...
-
-[![Sitecore Hackathon Video Embedding Alt Text](https://img.youtube.com/vi/EpNhxW4pNKk/0.jpg)](https://www.youtube.com/watch?v=EpNhxW4pNKk)
+![Content Tree](images/content-tree.png?raw=true "Content Tree")

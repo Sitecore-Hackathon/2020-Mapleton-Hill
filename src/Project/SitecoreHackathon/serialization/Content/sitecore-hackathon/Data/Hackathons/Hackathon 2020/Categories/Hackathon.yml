@@ -1,0 +1,17 @@
+﻿---
+ID: "5cbc9df7-c960-439f-88e8-66ebee1d52ef"
+Parent: "2e2ffe31-7141-42ba-b397-fe225a377d1c"
+Template: "4f4992dd-0d5b-4dfc-a746-4969a8ade963"
+Path: "/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon 2020/Categories/Hackathon"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T045934Z
+    - ID: "98077ce8-27bf-4736-af67-287b709740a9"
+      Hint: Name
+      Value: Sitecore Hackathon Website

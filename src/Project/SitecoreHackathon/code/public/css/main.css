@@ -1,0 +1,67 @@
+﻿/*
+    Default Colors:
+
+    red - #ab2928
+    orange - #d24627
+    bluegray - #859eb4
+    lightblue - #dce4ef
+    darkgray - #444444
+*/
+
+
+.teams-listing {
+
+}
+
+.teams-listing .card-header {
+    order: 1;
+    background-color: #ab2928;
+    color: #fff;
+}
+
+.teams-listing .card-header .card-title {
+    margin-bottom: 0;
+}
+
+.teams-listing .card-body {
+    order: 3;
+}
+
+.teams-listing .card-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.teams-listing .card-body ul li {
+
+}
+
+.teams-listing .card-footer {
+    order: 2;
+    background-color: #dce4ef;
+}
+
+.header-section {
+    border-bottom: 2px solid #ab2928;
+}
+
+.footer-section {
+    border-top: 2px solid #ab2928;
+}
+
+.content {
+   min-height: 200px;
+}
+
+.navbar {
+ 
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.navbar a {
+    margin: 5px;
+    color: #444444;
+}

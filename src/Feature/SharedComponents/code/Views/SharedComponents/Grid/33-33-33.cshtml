@@ -1,0 +1,17 @@
+﻿@using Sitecore.Mvc;
+<div class="container">
+    <div class="row">
+        @Html.Sitecore().DynamicPlaceholder("33-33-33-placeholder", CreateColumnWrapper(), count: 3)
+    </div>
+</div>
+
+@functions
+{
+    TagBuilder CreateColumnWrapper()
+    {
+        var tagBuilder = new TagBuilder("div");
+        tagBuilder.AddCssClass("col");
+        return tagBuilder;
+    }
+}
+

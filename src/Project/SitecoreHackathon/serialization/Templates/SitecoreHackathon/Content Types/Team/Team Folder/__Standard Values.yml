@@ -1,0 +1,22 @@
+﻿---
+ID: "d1fab645-64bf-4f2b-9a9b-e1cee055a98b"
+Parent: "bf6c44f0-4408-4715-ab1a-f1752c20e7d9"
+Template: "bf6c44f0-4408-4715-ab1a-f1752c20e7d9"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Team/Team Folder/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: |
+    {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+    {BF6C44F0-4408-4715-AB1A-F1752C20E7D9}
+    {698D10C2-C3D1-4E97-9F1C-11B3B8694EE5}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T042742Z

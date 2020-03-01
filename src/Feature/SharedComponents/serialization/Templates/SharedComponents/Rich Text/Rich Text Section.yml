@@ -1,0 +1,25 @@
+﻿---
+ID: "5bfe17dc-fbe3-4310-83c3-5cf34a93fc85"
+Parent: "99c38469-f955-4989-b3a4-4012b4e5bc91"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/SharedComponents/Rich Text/Rich Text Section
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/document_orientation_landscape.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{2FD43AFB-3618-4455-97C0-999D6F9FB74B}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T154629Z

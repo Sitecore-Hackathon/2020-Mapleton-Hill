@@ -1,0 +1,24 @@
+﻿---
+ID: "5220f431-0d31-41f4-bb5a-0dd7197f5a81"
+Parent: "6537dc7b-8d00-40f5-850c-b18934978e83"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Feature/Navigation/Header/Header/Data/Image
+DB: master
+SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: /sitecore/media library/Images
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Image
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T191253Z

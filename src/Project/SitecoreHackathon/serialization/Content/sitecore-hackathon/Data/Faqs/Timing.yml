@@ -1,0 +1,20 @@
+﻿---
+ID: "f016d0b3-c50f-49cc-a4d8-cf14f8a43e03"
+Parent: "41073d49-1586-4cbd-b7c9-b22824125b8b"
+Template: "6da35172-3775-4f53-b92e-dfaf1405f979"
+Path: "/sitecore/content/sitecore-hackathon/Data/Faqs/Timing"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T051112Z
+    - ID: "2fb35266-e393-4244-9814-7a0adc2f06d9"
+      Hint: Answer
+      Value: No, you can schedule your time and delegate appropriately. You can use as much or as little of the 24 hours to build your module.
+    - ID: "6a5b72a6-f420-4e9d-837c-accc5350369e"
+      Hint: Question
+      Value: "Do we have to work on our module all 24 hours of the hackathon?"

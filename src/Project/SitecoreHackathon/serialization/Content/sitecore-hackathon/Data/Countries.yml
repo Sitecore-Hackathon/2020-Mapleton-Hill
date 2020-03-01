@@ -1,0 +1,14 @@
+﻿---
+ID: "20572644-9ee5-4533-9d72-97de81f8d6f2"
+Parent: "8b39fc0c-b42a-45a0-8714-d79613ac81bc"
+Template: "bbc6695a-b9a4-4181-ae8d-b98b609b0e81"
+Path: "/sitecore/content/sitecore-hackathon/Data/Countries"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T045104Z

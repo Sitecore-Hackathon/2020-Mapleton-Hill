@@ -1,0 +1,18 @@
+﻿---
+ID: "a7e44000-1ec6-4edb-8c28-e8585479ff57"
+Parent: "af4f05b1-f1fd-4094-aeaf-92173960483d"
+Template: "bf6c44f0-4408-4715-ab1a-f1752c20e7d9"
+Path: "/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon 2020/Teams"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T043840Z

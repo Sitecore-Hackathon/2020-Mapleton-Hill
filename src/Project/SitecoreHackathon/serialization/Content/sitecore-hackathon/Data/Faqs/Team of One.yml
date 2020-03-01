@@ -1,0 +1,20 @@
+﻿---
+ID: "a22e2c30-73c7-4349-8edb-90e0a95ba43c"
+Parent: "41073d49-1586-4cbd-b7c9-b22824125b8b"
+Template: "6da35172-3775-4f53-b92e-dfaf1405f979"
+Path: "/sitecore/content/sitecore-hackathon/Data/Faqs/Team of One"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T051143Z
+    - ID: "2fb35266-e393-4244-9814-7a0adc2f06d9"
+      Hint: Answer
+      Value: We see this every year, where we find either an individual or a team of two, get in touch with me. I can try to pair you up with others in the similar situation and help you form a team.
+    - ID: "6a5b72a6-f420-4e9d-837c-accc5350369e"
+      Hint: Question
+      Value: "I am a Team of One but want to participate, what can I do?"

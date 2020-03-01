@@ -1,0 +1,25 @@
+﻿---
+ID: "698d10c2-c3d1-4e97-9f1c-11b3b8694ee5"
+Parent: "9d4d6913-a543-4125-bcd0-043df934d443"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Team/Team
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Office/32x32/users3.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: "{B1B66DA1-EC87-4F51-9759-9E4964B2AE0A}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{9651434C-0A57-4128-978F-2076FAEC223C}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T033937Z

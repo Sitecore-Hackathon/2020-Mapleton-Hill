@@ -1,0 +1,18 @@
+﻿---
+ID: "8b39fc0c-b42a-45a0-8714-d79613ac81bc"
+Parent: "f3dc048e-5a43-49fd-a474-b937e1770203"
+Template: "50087bf7-4855-46c3-9950-399755fa4f14"
+Path: "/sitecore/content/sitecore-hackathon/Data"
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/32x32/folder_red.png
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T043128Z

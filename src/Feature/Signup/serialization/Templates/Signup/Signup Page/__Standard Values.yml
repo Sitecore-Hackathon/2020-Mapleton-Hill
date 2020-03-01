@@ -1,0 +1,33 @@
+﻿---
+ID: "820652f9-5102-480f-80de-4f02b6707234"
+Parent: "66475f5a-6c44-4b30-945d-d82548312bbb"
+Template: "66475f5a-6c44-4b30-945d-d82548312bbb"
+Path: /sitecore/templates/Feature/Signup/Signup Page/__Standard Values
+DB: master
+SharedFields:
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{39480748-6E71-4F93-8D13-B43F37FB1635}">
+        <r
+          id="{6B5B0FE6-5C85-4487-BA7E-F8C2ECC186A8}"
+          ph="page-layout"
+          uid="{2C901A0A-B7C7-4741-AFE0-7A29997C380C}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T191604Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

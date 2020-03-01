@@ -1,0 +1,20 @@
+﻿---
+ID: "fdd28ba1-feb9-4df0-ae86-e70134403f0b"
+Parent: "6a46d59f-1499-4f17-87a0-4cda2e04b2c2"
+Template: "04963490-e4fc-4574-b18f-40f6d880e127"
+Path: "/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon 2020/Teams/Demo Team 1/Meetup Project"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T062022Z
+    - ID: "65803345-60be-42df-b5e9-855b2241d59f"
+      Hint: Category
+      Value: "{971C54EE-8B41-42FF-B3BE-6751FA02D9AE}"
+    - ID: "d1c29a4e-b003-4682-bfb7-064ddbf23712"
+      Hint: Name
+      Value: Meetup Project

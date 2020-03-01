@@ -1,0 +1,21 @@
+﻿---
+ID: "98077ce8-27bf-4736-af67-287b709740a9"
+Parent: "dccaeb17-2fd6-44c8-a14f-fc1affc66935"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Category/Category/Data/Name
+DB: master
+SharedFields:
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 100
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T034340Z

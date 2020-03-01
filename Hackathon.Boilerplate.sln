@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{17DD5718-6E13-4F2C-9738-B410396D4552}"
 EndProject
@@ -14,7 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		src\Leprechaun.config = src\Leprechaun.config
 		nuget.config = nuget.config
+		publishsettings.targets = publishsettings.targets
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -29,14 +31,141 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{D27C83
 		documentation\images\hackathon.png = documentation\images\hackathon.png
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{128161E2-13F1-4F06-9B13-553BC3CA9455}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{26810139-62FA-44FC-8A40-609522039C7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.DataAccess", "src\Foundation\DataAccess\code\Hackathon.Foundation.DataAccess.csproj", "{AF8570CF-5719-4B19-8F76-25DB81874F1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.Serialization", "src\Foundation\Serialization\code\Hackathon.Foundation.Serialization.csproj", "{C8506439-26E1-4802-BF60-60F4C7AA50DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Media", "Media", "{AFF930F6-3550-42E7-85CE-8657F142868A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.Media", "src\Feature\Media\code\Hackathon.Feature.Media.csproj", "{5E2532DC-EF35-4206-A1C4-12D4CDD7FA36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormExtensions", "FormExtensions", "{F631F02A-806F-4A2E-877A-4B3A3E9DC861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.FormExtensions", "src\Feature\FormExtensions\code\Hackathon.Feature.FormExtensions.csproj", "{9F8907F9-DB91-48C4-9051-99B8C0408374}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SitecoreHackathon", "SitecoreHackathon", "{2204B256-555F-4FAE-944E-D2539C96C0A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreHackathon.Website", "src\Project\SitecoreHackathon\code\SitecoreHackathon.Website.csproj", "{5536E771-C8FF-4E22-981D-F60A043DD033}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInjection", "DependencyInjection", "{F5BB3DF6-7665-439D-8DA5-FD74E5D6D596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.DependencyInjection", "src\Foundation\DependencyInjection\code\Hackathon.Foundation.DependencyInjection.csproj", "{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Teams", "Teams", "{30D0EF31-0DD9-4AEF-9C87-765235DDABBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.Teams", "src\Feature\Teams\code\Hackathon.Feature.Teams.csproj", "{8CEB9373-1E9E-430E-A2A7-C702808A7A3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Newsletter", "Newsletter", "{D761F0CC-BB65-4F8D-A8B8-7AC26DE120F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.Newsletter", "src\Feature\Newsletter\code\Hackathon.Feature.Newsletter.csproj", "{62DF38D7-A18E-4A24-9C3D-FB4E7EFF74B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Navigation", "Navigation", "{39F6283E-7EEF-4CF1-842B-5F729812D049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.Navigation", "src\Feature\Navigation\code\Hackathon.Feature.Navigation.csproj", "{6E83D653-9376-42FC-AD3E-81A73EEB2DE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SharedComponents", "SharedComponents", "{1ACE23D8-B2E3-4A62-8D04-2D4EF5393059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.SharedComponents", "src\Feature\SharedComponents\code\Hackathon.Feature.SharedComponents.csproj", "{316E5F79-2522-480F-95A1-700536BA2B5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dictionary", "Dictionary", "{B086DFA0-E0FB-43B9-B3A1-89C1AE7BC691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Foundation.Dictionary", "src\Foundation\Dictionary\code\Hackathon.Foundation.Dictionary.csproj", "{EA6BFABF-C4B5-4BF4-8991-1F7BB263689D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Signup", "Signup", "{0157AE18-A9BA-4169-A89B-A1BFC47187A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackathon.Feature.Signup", "src\Feature\Signup\code\Hackathon.Feature.Signup.csproj", "{878105B1-7603-4C73-87C3-C3B832F3EBC5}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF8570CF-5719-4B19-8F76-25DB81874F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8570CF-5719-4B19-8F76-25DB81874F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8570CF-5719-4B19-8F76-25DB81874F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8570CF-5719-4B19-8F76-25DB81874F1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8506439-26E1-4802-BF60-60F4C7AA50DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8506439-26E1-4802-BF60-60F4C7AA50DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8506439-26E1-4802-BF60-60F4C7AA50DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8506439-26E1-4802-BF60-60F4C7AA50DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E2532DC-EF35-4206-A1C4-12D4CDD7FA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E2532DC-EF35-4206-A1C4-12D4CDD7FA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E2532DC-EF35-4206-A1C4-12D4CDD7FA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E2532DC-EF35-4206-A1C4-12D4CDD7FA36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F8907F9-DB91-48C4-9051-99B8C0408374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8907F9-DB91-48C4-9051-99B8C0408374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8907F9-DB91-48C4-9051-99B8C0408374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8907F9-DB91-48C4-9051-99B8C0408374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5536E771-C8FF-4E22-981D-F60A043DD033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5536E771-C8FF-4E22-981D-F60A043DD033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5536E771-C8FF-4E22-981D-F60A043DD033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5536E771-C8FF-4E22-981D-F60A043DD033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CEB9373-1E9E-430E-A2A7-C702808A7A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEB9373-1E9E-430E-A2A7-C702808A7A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEB9373-1E9E-430E-A2A7-C702808A7A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEB9373-1E9E-430E-A2A7-C702808A7A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DF38D7-A18E-4A24-9C3D-FB4E7EFF74B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DF38D7-A18E-4A24-9C3D-FB4E7EFF74B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DF38D7-A18E-4A24-9C3D-FB4E7EFF74B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DF38D7-A18E-4A24-9C3D-FB4E7EFF74B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E83D653-9376-42FC-AD3E-81A73EEB2DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E83D653-9376-42FC-AD3E-81A73EEB2DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E83D653-9376-42FC-AD3E-81A73EEB2DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E83D653-9376-42FC-AD3E-81A73EEB2DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316E5F79-2522-480F-95A1-700536BA2B5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316E5F79-2522-480F-95A1-700536BA2B5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316E5F79-2522-480F-95A1-700536BA2B5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316E5F79-2522-480F-95A1-700536BA2B5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA6BFABF-C4B5-4BF4-8991-1F7BB263689D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6BFABF-C4B5-4BF4-8991-1F7BB263689D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6BFABF-C4B5-4BF4-8991-1F7BB263689D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6BFABF-C4B5-4BF4-8991-1F7BB263689D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{878105B1-7603-4C73-87C3-C3B832F3EBC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{878105B1-7603-4C73-87C3-C3B832F3EBC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{878105B1-7603-4C73-87C3-C3B832F3EBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{878105B1-7603-4C73-87C3-C3B832F3EBC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D27C83D2-2EAF-4E44-A1ED-2B3C2EBB5854} = {DAFED8F5-6CBD-4384-AAD6-DC3BCCF24911}
+		{128161E2-13F1-4F06-9B13-553BC3CA9455} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
+		{26810139-62FA-44FC-8A40-609522039C7B} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
+		{AF8570CF-5719-4B19-8F76-25DB81874F1F} = {26810139-62FA-44FC-8A40-609522039C7B}
+		{C8506439-26E1-4802-BF60-60F4C7AA50DA} = {128161E2-13F1-4F06-9B13-553BC3CA9455}
+		{AFF930F6-3550-42E7-85CE-8657F142868A} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{5E2532DC-EF35-4206-A1C4-12D4CDD7FA36} = {AFF930F6-3550-42E7-85CE-8657F142868A}
+		{F631F02A-806F-4A2E-877A-4B3A3E9DC861} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{9F8907F9-DB91-48C4-9051-99B8C0408374} = {F631F02A-806F-4A2E-877A-4B3A3E9DC861}
+		{2204B256-555F-4FAE-944E-D2539C96C0A1} = {15D97D61-D597-42EC-B7E9-E9EC8130E630}
+		{5536E771-C8FF-4E22-981D-F60A043DD033} = {2204B256-555F-4FAE-944E-D2539C96C0A1}
+		{F5BB3DF6-7665-439D-8DA5-FD74E5D6D596} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
+		{2EE961E6-A810-4156-8E7C-CDF9418A3B2A} = {F5BB3DF6-7665-439D-8DA5-FD74E5D6D596}
+		{30D0EF31-0DD9-4AEF-9C87-765235DDABBD} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{8CEB9373-1E9E-430E-A2A7-C702808A7A3A} = {30D0EF31-0DD9-4AEF-9C87-765235DDABBD}
+		{D761F0CC-BB65-4F8D-A8B8-7AC26DE120F2} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{62DF38D7-A18E-4A24-9C3D-FB4E7EFF74B3} = {D761F0CC-BB65-4F8D-A8B8-7AC26DE120F2}
+		{39F6283E-7EEF-4CF1-842B-5F729812D049} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{6E83D653-9376-42FC-AD3E-81A73EEB2DE0} = {39F6283E-7EEF-4CF1-842B-5F729812D049}
+		{1ACE23D8-B2E3-4A62-8D04-2D4EF5393059} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{316E5F79-2522-480F-95A1-700536BA2B5C} = {1ACE23D8-B2E3-4A62-8D04-2D4EF5393059}
+		{B086DFA0-E0FB-43B9-B3A1-89C1AE7BC691} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
+		{EA6BFABF-C4B5-4BF4-8991-1F7BB263689D} = {B086DFA0-E0FB-43B9-B3A1-89C1AE7BC691}
+		{0157AE18-A9BA-4169-A89B-A1BFC47187A4} = {17DD5718-6E13-4F2C-9738-B410396D4552}
+		{878105B1-7603-4C73-87C3-C3B832F3EBC5} = {0157AE18-A9BA-4169-A89B-A1BFC47187A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal

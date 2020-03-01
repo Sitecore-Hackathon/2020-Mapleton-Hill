@@ -1,0 +1,20 @@
+﻿---
+ID: "dc5f11da-d118-447f-b5f4-3f3902d9e358"
+Parent: "a7e44000-1ec6-4edb-8c28-e8585479ff57"
+Template: "698d10c2-c3d1-4e97-9f1c-11b3b8694ee5"
+Path: "/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon 2020/Teams/Maplethon Hill"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T050438Z
+    - ID: "60205e30-0fa0-4353-a48e-992e172b95ab"
+      Hint: Countries
+      Type: Multilist
+      Value: |
+        {29D83290-D5E0-4F5D-A21C-5535785716BA}
+        {36C6D802-3DE3-4AC9-9B53-840640FC6573}

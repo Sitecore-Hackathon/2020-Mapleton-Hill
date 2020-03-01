@@ -1,0 +1,24 @@
+﻿---
+ID: "65803345-60be-42df-b5e9-855b2241d59f"
+Parent: "8cbe5bb6-5dfd-4ff8-a405-ad576f7960dc"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Project/Project/Data/Category
+DB: master
+SharedFields:
+- ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
+  Hint: Source
+  Value: "query:./ancestor-or-self::*[@@templateid='{50087BF7-4855-46C3-9950-399755FA4F14}']//*[@@templateid='{0AE56EF6-1A22-4BBC-8B9F-8C3FA10ABBED}']//*[@@templateid='{7E8CE5D4-A011-43B2-92B3-9EADE6DD6BE0}']//*[@@templateid='{88CF098B-DAD5-4843-AF6C-AB2C972AFEB5}']/*"
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: Droplink
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T040929Z

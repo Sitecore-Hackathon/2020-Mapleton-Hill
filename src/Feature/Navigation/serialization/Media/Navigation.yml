@@ -1,0 +1,14 @@
+﻿---
+ID: "e562eef8-ae96-4896-be58-95aa20f99919"
+Parent: "0afa1a80-2a76-4d48-aeb2-ed3fd3e056d9"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: /sitecore/media library/Feature/Navigation
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T081839Z

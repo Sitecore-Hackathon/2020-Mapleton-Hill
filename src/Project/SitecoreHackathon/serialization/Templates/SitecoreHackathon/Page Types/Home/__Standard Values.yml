@@ -1,0 +1,44 @@
+﻿---
+ID: "f77653cc-5f6f-49f5-9e01-cea5c8079359"
+Parent: "0254ae4a-3b39-44a6-b9ea-c740341af70e"
+Template: "0254ae4a-3b39-44a6-b9ea-c740341af70e"
+Path: /sitecore/templates/Project/SitecoreHackathon/Page Types/Home/__Standard Values
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/home.png
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{7A408031-81E0-487A-ABAE-419EA9209E58}"
+- ID: "f1a1fe9e-a60c-4ddb-a3a0-bb5b29fe732e"
+  Hint: __Renderings
+  Type: layout
+  Value: |
+    <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <d
+        id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+        l="{A4109002-1B42-4F06-AA9F-7F8B89CB97EE}">
+        <r
+          id="{E3BC771A-26FF-473B-B276-3719D0C8348A}"
+          ph="header"
+          uid="{854EDC93-2975-4683-ABA4-9666F86C87C1}" />
+        <r
+          id="{1C5F78E5-6DD9-49E0-8684-5341982A25FB}"
+          ph="footer"
+          uid="{24688E58-5450-4E72-A680-F603DB66D4FB}" />
+      </d>
+    </r>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T055849Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

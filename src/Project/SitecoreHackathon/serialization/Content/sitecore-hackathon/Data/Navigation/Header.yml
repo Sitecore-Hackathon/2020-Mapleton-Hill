@@ -1,0 +1,17 @@
+﻿---
+ID: "b1a39cf6-36d0-4f89-99e7-d5ba65b03cea"
+Parent: "628f8ce6-d19e-4240-9de9-fc876a8dd05a"
+Template: "0da298d0-6f13-4434-8b2d-85e13fb4fc8b"
+Path: "/sitecore/content/sitecore-hackathon/Data/Navigation/Header"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T202717Z
+    - ID: "c756c89c-f905-4255-b1e8-275a38f655a6"
+      Hint: Menu
+      Value: "{55AB64B1-968C-43ED-91E5-E00F67C7FE8F}"

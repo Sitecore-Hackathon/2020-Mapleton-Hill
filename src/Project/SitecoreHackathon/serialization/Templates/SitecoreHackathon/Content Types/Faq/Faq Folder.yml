@@ -1,0 +1,25 @@
+﻿---
+ID: "68aa1e12-61b7-4cd3-a9dc-ffbfe2884e33"
+Parent: "5060bc5e-f62c-43be-b24e-97070d6fe327"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Project/SitecoreHackathon/Content Types/Faq/Faq Folder
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/speech_balloon_question.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: "{A87A00B1-E6DB-45AB-8B54-636FEC3B5523}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{D8E2C2C4-61C5-4FCD-A0BA-FEAB82FA7FCD}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T042134Z

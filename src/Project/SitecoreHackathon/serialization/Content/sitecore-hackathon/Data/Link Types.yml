@@ -1,0 +1,18 @@
+﻿---
+ID: "22c94449-5db7-4bde-83b6-a0c350ba2508"
+Parent: "8b39fc0c-b42a-45a0-8714-d79613ac81bc"
+Template: "dcf0f8e3-552b-4ccd-9e99-a9f99c0632e5"
+Path: "/sitecore/content/sitecore-hackathon/Data/Link Types"
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T044609Z

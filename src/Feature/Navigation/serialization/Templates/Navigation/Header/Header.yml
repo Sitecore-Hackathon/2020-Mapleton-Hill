@@ -1,0 +1,25 @@
+﻿---
+ID: "0da298d0-6f13-4434-8b2d-85e13fb4fc8b"
+Parent: "e3635052-e141-42b1-bb7f-1006b66a9e9c"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/templates/Feature/Navigation/Header/Header
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: wordprocessing/32x32/header.png
+- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
+  Hint: __Base template
+  Type: tree list
+  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{6364ECAE-05C6-46A9-AF23-05B04C2194CF}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T191219Z
