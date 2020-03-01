@@ -66,6 +66,10 @@ namespace Hackathon.Feature.Teams
     public partial interface IHasMembers : IGlassBase
     {
         
+        /// <summary>Represents the Members field (fd1b8fc6-ce8f-4742-8973-50d07e582942).</summary>
+        [SitecoreField(FieldName = Hackathon.Feature.Teams.Constants.HasMembers.Fields.Members_FieldName)]
+        IEnumerable<Guid> Members { get; }
+
     }
 
 }
@@ -82,6 +86,12 @@ namespace Hackathon.Feature.Teams.Constants
         public static readonly ID TemplateId = new ID(TemplateIdString);
 
         
+        public struct Fields
+        {
+        public static readonly ID Members = new ID("fd1b8fc6-ce8f-4742-8973-50d07e582942");
+        public const string Members_FieldName = "Members";
+
+        }
     }
 }
 
@@ -156,6 +166,12 @@ namespace Hackathon.Feature.Teams
 			public static readonly ID TemplateId = new ID(TemplateIdString);
 
 			
+			public struct Fields
+			{
+				public static readonly ID Members = new ID("fd1b8fc6-ce8f-4742-8973-50d07e582942");
+				public const string Members_FieldName = "Members";
+
+			}
 		}
 
 		public struct HasTeamName
@@ -178,6 +194,11 @@ namespace Hackathon.Feature.Teams
 // Hackathon.Feature.Teams.BasicTeam (/sitecore/templates/Feature/Teams/_Basic Team b1b66da1-ec87-4f51-9759-9e4964b2ae0a)
 
 // Hackathon.Feature.Teams.HasMembers (/sitecore/templates/Feature/Teams/_Has Members 1b7e5c2f-5240-4ac4-aaff-c6ef5d29623f)
+	// Members (fd1b8fc6-ce8f-4742-8973-50d07e582942)
+		// Type: Multilist
+		// Section: Data
+		// Sort Order: 300
+		// Source: /sitecore/content/sitecore-hackathon/Data/Members/Participants
 
 // Hackathon.Feature.Teams.HasTeamName (/sitecore/templates/Feature/Teams/_Has Team Name 79a5c5aa-92f3-4ae4-b9a6-d93954d87a50)
 	// Name (97cb116c-1aea-4d36-be95-b42205d42625)

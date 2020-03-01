@@ -1,37 +1,35 @@
-﻿using Hackathon.Feature.Teams.Models;
-using Hackathon.Foundation.DependencyInjection;
+﻿using Hackathon.Foundation.DependencyInjection;
 using System.Collections.Generic;
+using Sitecore.Data.Items;
+using Glass.Mapper.Sc.Builders;
+using Glass.Mapper.Sc.Web;
+using System.Linq;
+using Sitecore.Data;
 
 namespace Hackathon.Feature.Teams.Services
 {
     [Service(typeof(ITeamsService), Lifetime = Lifetime.Transient)]
     public class TeamsService : ITeamsService
     {
-        
-        public TeamsService()
-        {
+        private readonly IRequestContext _context;
 
+        public TeamsService(IRequestContext context)
+        {
+            _context = context;
         }
 
-        public IEnumerable<IBasicTeam> GetTeams()
+        public IEnumerable<IBasicTeam> GetTeams(ID hackathon)
         {
-            var mockTeams = new List<BasicTeam>()
-            {
-                new BasicTeam()
-                {
-                    Name = "Mapleton Hill"
-                },
-                new BasicTeam()
-                {
-                    Name = "Sitecore Crew"
-                },
-                new BasicTeam()
-                {
-                    Name = "No Name #1"
-                }
-            };
+            GetItemByItemBuilder builder = new GetItemByItemBuilder();
+            Item hackathonItem = _context.SitecoreService.GetItem<Item>(hackathon.Guid);
 
-            return mockTeams;
+            var teams = hackathonItem.Axes.GetDescendants().Where(t => t.Template.BaseTemplates.Any(b => b.ID == Hackathon.Feature.Teams.Constants.BasicTeam.TemplateId));
+
+            foreach(var teamItem in teams)
+            {
+                var itemBuilder = builder.Item(teamItem);
+                yield return _context.SitecoreService.GetItem<IBasicTeam>(itemBuilder);
+            }
         }
     }
 }
