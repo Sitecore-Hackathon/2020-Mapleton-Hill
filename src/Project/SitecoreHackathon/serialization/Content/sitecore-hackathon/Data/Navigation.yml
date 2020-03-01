@@ -1,0 +1,14 @@
+﻿---
+ID: "628f8ce6-d19e-4240-9de9-fc876a8dd05a"
+Parent: "8b39fc0c-b42a-45a0-8714-d79613ac81bc"
+Template: "0ebeffc7-4211-4586-9adc-05eade438a0c"
+Path: "/sitecore/content/sitecore-hackathon/Data/Navigation"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T195404Z

@@ -1,0 +1,48 @@
+﻿@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc
+@using Hackathon.Feature.Navigation.Header
+@using Hackathon.Feature.Navigation.Menu
+@using Hackathon.Feature.Navigation.Models
+
+@using Glass.Mapper.Sc.Web.Mvc
+
+@model HeaderModel
+
+<div class="header-section">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    @Html.Glass().RenderImage(Model, m => m.Image, isEditable: true)
+                </a>
+            </div>
+            @if (Model.Menu != null && Model.Menu.Items != null)
+            {
+        <ul class="nav navbar-nav">
+            @foreach (var item in Model.Menu.Items)
+            {
+                if (item.Items == null)
+                {
+                    <li>@Html.Glass().RenderLink(item, x => x.Link, new System.Collections.Specialized.NameValueCollection { { "class", "menu-link" } })</li>
+                }
+                else
+                {
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">@item.Link.Text<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                @foreach (var subItem in item.Items)
+                                {
+                                    <li>
+                                        @Html.Glass().RenderLink(subItem, x => x.Link, new System.Collections.Specialized.NameValueCollection { { "class", "menu-link" } })
+                                    </li>
+                                }
+                            </ul>
+                    </li>
+                }
+            }
+        </ul>
+            }
+
+        </div>
+    </nav>
+</div>

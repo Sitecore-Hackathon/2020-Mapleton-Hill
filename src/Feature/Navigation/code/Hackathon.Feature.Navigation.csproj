@@ -258,11 +258,19 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.Navigation.Serialization.config" />
     <Content Include="CodeGen.config" />
+    <Content Include="Views\Navigation\Header.cshtml" />
+    <Content Include="Views\Navigation\Footer.cshtml" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
+    <Compile Include="Controller\NavigationController.cs" />
+    <Compile Include="Models\FooterModel.cs" />
+    <Compile Include="Models\HeaderModel.cs" />
+    <Compile Include="Models\MenuModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\INavigationService.cs" />
+    <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -280,6 +288,14 @@
       <Project>{af8570cf-5719-4b19-8f76-25db81874f1f}</Project>
       <Name>Hackathon.Foundation.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Foundation\DependencyInjection\code\Hackathon.Foundation.DependencyInjection.csproj">
+      <Project>{2ee961e6-a810-4156-8e7c-cdf9418a3b2a}</Project>
+      <Name>Hackathon.Foundation.DependencyInjection</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Navigation\Footer\" />
+    <Folder Include="Views\Navigation\Header\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,0 +1,21 @@
+﻿---
+ID: "e3bc771a-26ff-473b-b276-3719d0c8348a"
+Parent: "3bd240d0-dbc9-4ad6-8253-0d1491c35088"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/Renderings/Feature/Navigation/Header Rendering
+DB: master
+SharedFields:
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: Header
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: Hackathon.Feature.Navigation.Controller.NavigationController, Hackathon.Feature.Navigation
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200301T002222Z

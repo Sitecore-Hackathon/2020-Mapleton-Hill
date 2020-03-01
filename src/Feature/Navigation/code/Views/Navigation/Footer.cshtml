@@ -1,0 +1,30 @@
+﻿@using Sitecore.Mvc.Presentation
+@using Sitecore.Mvc
+@using Hackathon.Feature.Navigation.Footer
+@using Hackathon.Feature.Navigation.Models
+
+@using Glass.Mapper.Sc.Web.Mvc
+
+@model FooterModel
+
+<div class="footer-section">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        @Html.Glass().Editable(Model, r => r.Title)
+                    </a>
+                </div>
+                @if (Model.Menu != null && Model.Menu.Items != null)
+                {
+                    <ul class="nav navbar-nav">
+                        @foreach (var item in Model.Menu.Items)
+                        {
+                            <li>@Html.Glass().RenderLink(item, x => x.Link, new System.Collections.Specialized.NameValueCollection { { "class", "menu-link" } })</li>
+                        }
+                    </ul>
+                }
+
+            </div>
+        </nav>
+ </div>
