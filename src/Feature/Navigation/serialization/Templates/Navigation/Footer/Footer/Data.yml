@@ -1,0 +1,14 @@
+﻿---
+ID: "8193823f-c2f3-4369-bbb4-308a584d2dbe"
+Parent: "b7187448-7fc7-49d2-90e0-554ca84480a8"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/Navigation/Footer/Footer/Data
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T205435Z

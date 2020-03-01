@@ -1,0 +1,18 @@
+﻿---
+ID: "128292d9-c5b7-4645-8342-1e1af5b07556"
+Parent: "4482f966-bb9b-4e00-ab75-098e918b2380"
+Template: "4482f966-bb9b-4e00-ab75-098e918b2380"
+Path: /sitecore/templates/Feature/Navigation/Menu/Menu/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T235406Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

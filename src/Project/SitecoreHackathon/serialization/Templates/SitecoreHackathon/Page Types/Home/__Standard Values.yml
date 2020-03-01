@@ -19,7 +19,16 @@ SharedFields:
     <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <d
         id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
-        l="{A4109002-1B42-4F06-AA9F-7F8B89CB97EE}" />
+        l="{A4109002-1B42-4F06-AA9F-7F8B89CB97EE}">
+        <r
+          id="{E3BC771A-26FF-473B-B276-3719D0C8348A}"
+          ph="header"
+          uid="{854EDC93-2975-4683-ABA4-9666F86C87C1}" />
+        <r
+          id="{1C5F78E5-6DD9-49E0-8684-5341982A25FB}"
+          ph="footer"
+          uid="{24688E58-5450-4E72-A680-F603DB66D4FB}" />
+      </d>
     </r>
 Languages:
 - Language: en

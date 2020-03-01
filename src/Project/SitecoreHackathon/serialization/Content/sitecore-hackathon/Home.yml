@@ -9,6 +9,24 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:p="p" xmlns:s="s"
+          p:p="1">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+            <r
+              uid="{854EDC93-2975-4683-ABA4-9666F86C87C1}"
+              s:ds="{B1A39CF6-36D0-4F89-99E7-D5BA65B03CEA}"
+              s:par="" />
+            <r
+              uid="{24688E58-5450-4E72-A680-F603DB66D4FB}"
+              s:ds="{11013E76-22FF-409C-96A1-30D431E7E2AA}"
+              s:par="" />
+          </d>
+        </r>
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20200229T060219Z

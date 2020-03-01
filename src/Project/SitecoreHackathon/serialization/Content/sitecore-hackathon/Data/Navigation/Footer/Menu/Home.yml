@@ -1,0 +1,14 @@
+﻿---
+ID: "36a14f21-500e-4f22-9d54-e487567183ee"
+Parent: "3add50aa-4b00-443f-8a98-271202d4e9c9"
+Template: "4482f966-bb9b-4e00-ab75-098e918b2380"
+Path: "/sitecore/content/sitecore-hackathon/Data/Navigation/Footer/Menu/Home"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T195551Z

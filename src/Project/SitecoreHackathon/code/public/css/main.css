@@ -40,3 +40,28 @@
     order: 2;
     background-color: #dce4ef;
 }
+
+.header-section {
+    border-bottom: 2px solid #ab2928;
+}
+
+.footer-section {
+    border-top: 2px solid #ab2928;
+}
+
+.content {
+   min-height: 200px;
+}
+
+.navbar {
+ 
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.navbar a {
+    margin: 5px;
+    color: #444444;
+}
