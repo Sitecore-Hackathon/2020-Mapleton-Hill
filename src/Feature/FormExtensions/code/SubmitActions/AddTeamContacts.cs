@@ -148,8 +148,10 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                         {
                             var linkTemplate = db.GetTemplate(SitecoreConstants.LinkTemplateId);
                             var twitterLink = linkFolder.Add("Twitter", linkTemplate);
+                            LinkField linkField = twitterLink.Fields["Link"];
                             twitterLink.Editing.BeginEdit();
-                            twitterLink["Link"] = teamMember.Twitter;
+                            linkField.LinkType = "external";
+                            linkField.Url = teamMember.Twitter;
                             twitterLink["Type"] = SitecoreConstants.TitterLinkId;
                             twitterLink.Editing.EndEdit();
                         }
@@ -161,8 +163,10 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                         {
                             var linkTemplate = db.GetTemplate(SitecoreConstants.LinkTemplateId);
                             var linkedInLink = linkFolder.Add("LinkedIn", linkTemplate);
+                            LinkField linkField = linkedInLink.Fields["Link"];
                             linkedInLink.Editing.BeginEdit();
-                            linkedInLink["Link"] = teamMember.Twitter;
+                            linkField.LinkType = "external";
+                            linkField.Url = teamMember.LinkedIn;
                             linkedInLink["Type"] = SitecoreConstants.LinkedInLinkId;
                             linkedInLink.Editing.EndEdit();
                         }
