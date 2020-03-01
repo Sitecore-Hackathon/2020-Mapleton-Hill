@@ -76,8 +76,7 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
             {
                 try
                 {
-                    Database db = Sitecore.Configuration.Factory.GetDatabase("master");
-                    Guid teamId = CreateTeam(teamName, teamMembers, db);
+                    Database db = Sitecore.Configuration.Factory.GetDatabase("master");                    
                     foreach (var teamMember in teamMembers)
                     {
                         Contact contact = null;
@@ -102,8 +101,9 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                         //    client.Submit();
                         //}
 
-                        CreateTeamMember(teamMember, contact, db);
+                        teamMember.Id = CreateTeamMember(teamMember, contact, db);
                     }
+                    Guid teamId = CreateTeam(teamName, teamMembers, db);
                 }
                 catch (Exception ex)
                 {
@@ -121,14 +121,16 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
         /// <param name="teamMember"></param>
         /// <param name="contact"></param>
         /// <param name="db"></param>
-        private void CreateTeamMember(TeamMember teamMember, Contact contact, Database db)
+        private Guid CreateTeamMember(TeamMember teamMember, Contact contact, Database db)
         {
             var memberTemplate = db.GetTemplate(SitecoreConstants.MemberTemplateId);
             var participantsFolder = db.GetItem(SitecoreConstants.ParticipantsFolderId);
 
+            Item member = null;
+
             using (new Sitecore.SecurityModel.SecurityDisabler())
             {
-                Item member = participantsFolder.Add($"{teamMember.FirstName} {teamMember.LastName}", memberTemplate);
+                member = participantsFolder.Add($"{teamMember.FirstName} {teamMember.LastName}", memberTemplate);
                 if (member != null)
                 {
                     member.Editing.BeginEdit();
@@ -173,6 +175,8 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                     }
                 }
             }
+
+            return member != null ? member.ID.ToGuid() : Guid.Empty;
         }
 
         private bool IsUrlValid(string url)
@@ -202,6 +206,7 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                     newItem.Editing.BeginEdit();
                     newItem["Name"] = teamName;
                     newItem["Countries"] = string.Join("|", countries);
+                    newItem["Members"] = string.Join("|", teamMembers.Select(tm => tm.Id));
                     newItem.Editing.EndEdit();
                 }
 
