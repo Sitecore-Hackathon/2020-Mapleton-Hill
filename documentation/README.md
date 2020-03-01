@@ -43,7 +43,6 @@ The site was built with the following components:
 
 ![Teams Listing Component](images/teams-listing.png?raw=true "Teams Listing Component")
 
-2. Signup Form
+2. Hackathons, Teams and Participates can be managed from Sitecore
 
-![Signup Form](images/signup.png?raw=true "Signup Form")
-
+![Content Tree](images/content-tree.png?raw=true "Content Tree")
