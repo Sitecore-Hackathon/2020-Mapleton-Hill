@@ -13,6 +13,7 @@ using Sitecore.XConnect;
 using Sitecore.XConnect.Client;
 using Sitecore.XConnect.Client.Configuration;
 using Sitecore.XConnect.Collection.Model;
+using Sitecore.Analytics;
 
 namespace Hackathon.Feature.FormExtensions.SubmitActions
 {
@@ -29,6 +30,11 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
         public AddTeamContacts(ISubmitActionData submitActionData) : base(submitActionData)
         {
         }
+
+        /// <summary>
+        /// Gets the current tracker.
+        /// </summary>
+        protected virtual ITracker CurrentTracker => Tracker.Current;
 
         /// <summary>
         /// Executes the action with the specified <paramref name="data" />.
@@ -74,30 +80,27 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                     Guid teamId = CreateTeam(teamName, teamMembers, db);
                     foreach (var teamMember in teamMembers)
                     {
-                        var source = $"Hackathon.Signup.{teamId.ToString("N")}";
-                        var identifier = $"{teamMember.Email.ToLower()}";
-                        
-                        var trackerIdentifier = new IdentifiedContactReference(source, identifier);
-                        var expandOptions = new ContactExpandOptions(
-                            CollectionModel.FacetKeys.PersonalInformation,
-                            CollectionModel.FacetKeys.EmailAddressList);
+                        Contact contact = null;
 
-                        Contact contact = client.Get(trackerIdentifier, expandOptions);
+                        //var source = "Hackathon.Signup";
+                        //var identifier = CurrentTracker?.Contact.ContactId.ToString("N");
 
-                        if (contact == null)
-                        {
-                            var contactIdentifiers = new[]
-                            {
-                                new ContactIdentifier(source, identifier, ContactIdentifierType.Known)
-                            };
+                        //CurrentTracker?.Session.IdentifyAs(source, identifier);
 
-                            contact = new Contact(contactIdentifiers);
-                        }
+                        //var trackerIdentifier = new IdentifiedContactReference(source, identifier);
+                        //var expandOptions = new ContactExpandOptions(
+                        //    CollectionModel.FacetKeys.PersonalInformation,
+                        //    CollectionModel.FacetKeys.EmailAddressList);
 
-                        SetPersonalInformation(teamMember.FirstName, teamMember.LastName, contact, client);
-                        SetEmail(teamMember.Email, contact, client);
+                        //contact = client.Get(trackerIdentifier, expandOptions);
 
-                        client.Submit();
+                        //if (contact != null)
+                        //{
+                        //    SetPersonalInformation(teamMember.FirstName, teamMember.LastName, contact, client);
+                        //    SetEmail(teamMember.Email, contact, client);
+
+                        //    client.Submit();
+                        //}
 
                         CreateTeamMember(teamMember, contact, db);
                     }
@@ -112,47 +115,57 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
             return true;
         }
 
+        /// <summary>
+        /// Create Member Item for current Team Member
+        /// </summary>
+        /// <param name="teamMember"></param>
+        /// <param name="contact"></param>
+        /// <param name="db"></param>
         private void CreateTeamMember(TeamMember teamMember, Contact contact, Database db)
         {
             var memberTemplate = db.GetTemplate(SitecoreConstants.MemberTemplateId);
             var participantsFolder = db.GetItem(SitecoreConstants.ParticipantsFolderId);
-            Item member = participantsFolder.Add($"{teamMember.FirstName} {teamMember.LastName}", memberTemplate);
-            if (member != null)
+
+            using (new Sitecore.SecurityModel.SecurityDisabler())
             {
-                member.Editing.BeginEdit();
-                member["FirstName"] = teamMember.FirstName;
-                member["LastName"] = teamMember.LastName;
-                member["Email"] = teamMember.Email;
-                member["xDb Contact Id"] = contact.Id.ToString();
-                member.Editing.EndEdit();
-
-                // create link folder
-                var linkFolderTemplate = db.GetTemplate(SitecoreConstants.LinkFolderTemplateId);
-                Item linkFolder = member.Add("Links", linkFolderTemplate);
-
-                if (!string.IsNullOrEmpty(teamMember.Twitter))
+                Item member = participantsFolder.Add($"{teamMember.FirstName} {teamMember.LastName}", memberTemplate);
+                if (member != null)
                 {
-                    if (teamMember.Twitter.Contains("twitter.com") && IsUrlValid(teamMember.Twitter))
+                    member.Editing.BeginEdit();
+                    member["First Name"] = teamMember.FirstName;
+                    member["Last Name"] = teamMember.LastName;
+                    member["Email"] = teamMember.Email;
+                    member["xDb Contact Id"] = contact?.Id.ToString();
+                    member.Editing.EndEdit();
+
+                    // create link folder
+                    var linkFolderTemplate = db.GetTemplate(SitecoreConstants.LinkFolderTemplateId);
+                    Item linkFolder = member.Add("Links", linkFolderTemplate);
+
+                    if (!string.IsNullOrEmpty(teamMember.Twitter))
                     {
-                        var linkTemplate = db.GetTemplate(SitecoreConstants.LinkTemplateId);
-                        var twitterLink = linkFolder.Add("Twitter", linkTemplate);
-                        member.Editing.BeginEdit();
-                        twitterLink["Link"] = teamMember.Twitter;
-                        twitterLink["Type"] = SitecoreConstants.TitterLinkId;
-                        member.Editing.EndEdit();
+                        if (teamMember.Twitter.Contains("twitter.com") && IsUrlValid(teamMember.Twitter))
+                        {
+                            var linkTemplate = db.GetTemplate(SitecoreConstants.LinkTemplateId);
+                            var twitterLink = linkFolder.Add("Twitter", linkTemplate);
+                            twitterLink.Editing.BeginEdit();
+                            twitterLink["Link"] = teamMember.Twitter;
+                            twitterLink["Type"] = SitecoreConstants.TitterLinkId;
+                            twitterLink.Editing.EndEdit();
+                        }
                     }
-                }
 
-                if (!string.IsNullOrEmpty(teamMember.LinkedIn))
-                {
-                    if (teamMember.Twitter.Contains("linkedin.com") && IsUrlValid(teamMember.LinkedIn))
+                    if (!string.IsNullOrEmpty(teamMember.LinkedIn))
                     {
-                        var linkTemplate = db.GetTemplate(SitecoreConstants.LinkTemplateId);
-                        var linkedInLink = linkFolder.Add("LinkedIn", linkTemplate);
-                        member.Editing.BeginEdit();
-                        linkedInLink["Link"] = teamMember.Twitter;
-                        linkedInLink["Type"] = SitecoreConstants.LinkedInLinkId;
-                        member.Editing.EndEdit();
+                        if (teamMember.LinkedIn.Contains("linkedin.com") && IsUrlValid(teamMember.LinkedIn))
+                        {
+                            var linkTemplate = db.GetTemplate(SitecoreConstants.LinkTemplateId);
+                            var linkedInLink = linkFolder.Add("LinkedIn", linkTemplate);
+                            linkedInLink.Editing.BeginEdit();
+                            linkedInLink["Link"] = teamMember.Twitter;
+                            linkedInLink["Type"] = SitecoreConstants.LinkedInLinkId;
+                            linkedInLink.Editing.EndEdit();
+                        }
                     }
                 }
             }
@@ -164,13 +177,19 @@ namespace Hackathon.Feature.FormExtensions.SubmitActions
                         && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
         }
 
+        /// <summary>
+        /// Create a Team Item
+        /// </summary>
+        /// <param name="teamName"></param>
+        /// <param name="teamMembers"></param>
+        /// <param name="db"></param>
+        /// <returns>Guid ID of new Team Item.</returns>
         private Guid CreateTeam(string teamName, IEnumerable<TeamMember> teamMembers, Database db)
         {
             var countries = teamMembers.Select(tm => tm.Country);
             var teamTemplate = db.GetTemplate(SitecoreConstants.TeamTemplateId);
             var currentTeamFolder = db.GetItem($"/sitecore/content/sitecore-hackathon/Data/Hackathons/Hackathon {DateTime.Now.Year}/Teams");
 
-            // if name not found, add it
             using (new Sitecore.SecurityModel.SecurityDisabler())
             {
                 Item newItem = currentTeamFolder.Add(teamName, teamTemplate);
